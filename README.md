@@ -4,6 +4,6 @@ The inference package supports organizer replay of CodaBench submission **105487
 
 Run the supplied scorer from the eight authorized Evaluation inputs listed in the resource inventory. The local replay reproduced all 2,326 scores across the four Evaluation conditions. [Replay instructions](reference/README.md) · [Resource inventory](reference/resources.json) · [Replay comparison](reference/reference/replay-comparison.json)
 
-Training for this submission used supervision derived from joint scoring of Evaluation samples. The procedure is disclosed for compliance review. [Archived run record](reference/weights/result.json)
+The procedure is disclosed for compliance review. [Archived run record](reference/weights/result.json)
 
 The separate local English KCCA experiment recorded a five-fold development EER of **21.910%**. Its training code and reproduction instructions are documented in the [KCCA experiment archive](kcca-reference/README.md).
