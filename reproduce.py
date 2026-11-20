@@ -70,7 +70,7 @@ def metrics() -> dict[str, object]:
 
 def replay(resource_root: Path, output: Path) -> dict[str, object]:
     inventory = json.loads((ROOT / "resources.json").read_text())
-    reference = ROOT / "reference/candidate.zip"
+    reference = ROOT / "kcca-reference/candidate.zip"
     verify(reference, inventory["package_sha256"])
     for name, item in inventory["external_resources"].items():
         if "replay" in item["stages"]:

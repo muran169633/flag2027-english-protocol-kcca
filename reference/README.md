@@ -7,7 +7,7 @@ This package contains the 15 frozen v428 checkpoints and their 15 Gaussian scori
 The replay uses Python 3.11 and the original PyTorch 2.8 CUDA implementation. Run the commands below from the repository root with the Conda environment `my_project_env` active. The archived environment used CUDA 12.8.
 
 ```bash
-cd v428-inference
+cd reference
 uv export --frozen --extra train --no-dev --no-emit-project --emit-index-url \
   --format requirements-txt --output-file /tmp/flag2027-v428-requirements.txt
 uv pip install --python "$CONDA_PREFIX/bin/python" -r /tmp/flag2027-v428-requirements.txt
