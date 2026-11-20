@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-19T10:49:07.448968+08:00",
+  "phase": 30375,
+  "task": 36603,
+  "fingerprint": {
+    "eer_avg": 9.87,
+    "eer_ng_en": 7.65,
+    "eer_ng_bn": 6.73,
+    "eer_g_en": 10.58,
+    "eer_g_bn": 14.53
+  },
+  "expected_rows": 45,
+  "unique_rows": 45,
+  "all_pages": true,
+  "pages": [
+    {
+      "url": "https://www.codabench.org/api/phases/30375/get_leaderboard/",
+      "sha256": "a4c341890a661bf127e902686458f1873c2907bc99d2dc769c23e54388bb5d5c",
+      "rows": 45
+    }
+  ],
+  "exact_matches": [
+    {
+      "id": 1054878,
+      "when": "2026-11-16T06:39:47.139470Z",
+      "scores": {
+        "eer_avg": 9.87,
+        "eer_ng_en": 7.65,
+        "eer_ng_bn": 6.73,
+        "eer_g_en": 10.58,
+        "eer_g_bn": 14.53
+      }
+    }
+  ],
+  "scope": "仅核对用户报告四项及均值的可追溯性。公开行无法核对上传包字节。未读取私有提交或拿线上分项选择方案。"
+}

@@ -1,0 +1,378 @@
+{
+  "paths": {
+    "data/FLAG_2027/derived/evaluation_phase/manifest.json": {
+      "sha256": "78c213c8f0c68fb8dc27cc4cb5fad7991f0e8b2413f8fe9826c18323b12b9e2a",
+      "bytes": 1029635,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "evaluation/submission_evaluation_v382.zip": {
+      "sha256": "dd1ffdcee7007e7bf34abfebf772e3bfed52009a121e81364daa4855b062ae26",
+      "bytes": 27072,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "exps/v428/config.json": {
+      "sha256": "881a54b4a9270a4309ae59f63794c3871f2bfab3f992a20ff62f1b66725f7a82",
+      "bytes": 5053,
+      "bundled": true,
+      "stages": [
+        "replay",
+        "source"
+      ]
+    },
+    "exps/v428/package.py": {
+      "sha256": "0e3b3e9d9eb33f7637fb580689899aa3156a9716039eb82e3c1cdb06fcf50822",
+      "bytes": 7739,
+      "bundled": true,
+      "stages": [
+        "replay",
+        "source"
+      ]
+    },
+    "exps/v428/run.py": {
+      "sha256": "54c61f7ba25fd911869ac616ff2af66add9c09015d7042380e97f7fdbc6c5704",
+      "bytes": 27861,
+      "bundled": true,
+      "stages": [
+        "replay",
+        "source"
+      ]
+    },
+    "outputs/v379/features/eval_faces.json": {
+      "sha256": "b352d00d1a4722941df86b494923c3cfd8ce6e7c8ed6ad8a0a8ef7d6606a163b",
+      "bytes": 385592,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v379/features/eval_voices.json": {
+      "sha256": "4c8ccc092540c4326a51f5c5fe835ee85cffbf729ef5c4f0119d1d320e7d5f3a",
+      "bytes": 387918,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v379/features/eval_voices.npz": {
+      "sha256": "6aa4628d0d409eaf53b3d65405c61389b7082ac5e88c20e6b1c3471bec8add78",
+      "bytes": 5955308,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v379/features/eval_voices_wavlm.npz": {
+      "sha256": "b3a641f84ff55ccb1a500f13edbc75ac509b53b66e39b53da9d02a64a516c0d3",
+      "bytes": 4763912,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v381/features/eval_faces_generic.npz": {
+      "sha256": "2a713c431d3b7b370b3085f06d08d173dffb7c8c737ba57369ab842c568bcdf4",
+      "bytes": 11909622,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v382/features/eval_faces_large.npz": {
+      "sha256": "850a8ccd0cfeac0e911b3df30db3671d8f6e5b2b16d978d948da736073d0fd5e",
+      "bytes": 14291452,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v383/features/eval_voices_generic.npz": {
+      "sha256": "35ff7900efb15bbf5543174cb5765cf6c7c787e1a9a753dc4f8cff54ff22e986",
+      "bytes": 16673276,
+      "bundled": false,
+      "stages": [
+        "replay",
+        "train-v427",
+        "train-v428"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f0_teacher_guided.pt": {
+      "sha256": "d2c312966fdf584afc98409349eea2680dac55ac956f5de3e770a9307c7c7b6d",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f0_teacher_guided_stats.npz": {
+      "sha256": "df84bd09ee050bbe660dbcd13e3897fb848fb046d119a6d4cd684a7772c4265c",
+      "bytes": 1219607,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f1_teacher_guided.pt": {
+      "sha256": "1bc7cce07e7ba9b35d9e1369e82d892967dcf69537fe9588fdac3c6c1f76a62f",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f1_teacher_guided_stats.npz": {
+      "sha256": "61bebf30ae26def901e8341796a2da7292d9a99304688a774855227f96918423",
+      "bytes": 1218985,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f2_teacher_guided.pt": {
+      "sha256": "d77f1d0734493755ee108fb1e51e0bc437dcf4625bc6f18899669d8a7ce68594",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f2_teacher_guided_stats.npz": {
+      "sha256": "276b0867c48e54514e5db15c3b68f90ba85f74262004c767ba56a5506be786f4",
+      "bytes": 1218578,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f3_teacher_guided.pt": {
+      "sha256": "d72b2488bc87535bd9ffb0606d5ebffd8be53caf71f0b610d4077b66b745acdc",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f3_teacher_guided_stats.npz": {
+      "sha256": "2ccd2ff312de6e77d49bf37ce74d27241b326a32433f43508b9550af5fdf24ab",
+      "bytes": 1219097,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f4_teacher_guided.pt": {
+      "sha256": "7c31485ce7d59b62ad1041bf65975b2edb117218c12ca0e060451087b20c5dd4",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s1_f4_teacher_guided_stats.npz": {
+      "sha256": "de3bf0ed2298922222b0fc99116b66ad363288422abdc3b46d39ba0c3d6e9ae6",
+      "bytes": 1218081,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f0_teacher_guided.pt": {
+      "sha256": "a0da8317466dadb5a63feb16ad38492ca37bf8b428881d3cc4d39ab044720440",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f0_teacher_guided_stats.npz": {
+      "sha256": "e16c48af10cbb3a4a493e7f5df594643e8c7049cd27f5ed616c252be9dd0b404",
+      "bytes": 1219418,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f1_teacher_guided.pt": {
+      "sha256": "fe6f7bb7a4ffabb472664411bb04ab7b7c06bd001a563ac320d23400293566c8",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f1_teacher_guided_stats.npz": {
+      "sha256": "e5229e89be5f180b9f063dc4bbdfd2b71c8d4f18eda3628fb76ae349138a9b47",
+      "bytes": 1217610,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f2_teacher_guided.pt": {
+      "sha256": "7612d6ce3f0b3d6cf709630e78bca743b2b59527f7e078cfb3978aed7091a855",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f2_teacher_guided_stats.npz": {
+      "sha256": "972f104ef1ea4be201528d812ec4b5644918b73a852987bd2f5032243ceb9606",
+      "bytes": 1217263,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f3_teacher_guided.pt": {
+      "sha256": "6ce334420adf3900c70f0294faa47d76ae8d671f4ca758f04a0f5b9dec945985",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f3_teacher_guided_stats.npz": {
+      "sha256": "ffb1adc1336907ecb2cb07b187acf8ff8607c733fcd8113d526f7f434432694b",
+      "bytes": 1218554,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f4_teacher_guided.pt": {
+      "sha256": "7d6ce2e4df5625c9513ef75d0af769507ef3232172fe8e45756a5dfcda60cad7",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s2_f4_teacher_guided_stats.npz": {
+      "sha256": "57c553e65a856b900d076bc309ba56f767b0655363d1d8790112d9051bc2b340",
+      "bytes": 1218985,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f0_teacher_guided.pt": {
+      "sha256": "59e083972ab653a9f51f6028a93d4e8892487a13bc87db4ceaa167140c0748e5",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f0_teacher_guided_stats.npz": {
+      "sha256": "14a9ca3cff9a2bd3d606c516a9bf8c057241abd3019ab7a0a1a0a23efebeb697",
+      "bytes": 1219235,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f1_teacher_guided.pt": {
+      "sha256": "0c550f7b59d5d69a775ac266fdc03775bf40fb1a650d1bba6b326335e9689b73",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f1_teacher_guided_stats.npz": {
+      "sha256": "5e7abfd70dffa3fb131e060c797eb9607f26cbcc5d18788a3191517f9b839dc4",
+      "bytes": 1219536,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f2_teacher_guided.pt": {
+      "sha256": "9479285bac70e47bb91a07fbf41eadbcfa204bbe7cdc4f82f03c7ecf2c2d5dbd",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f2_teacher_guided_stats.npz": {
+      "sha256": "0822e29f0860508ae9b7c5b3f607dbe970b60743be9deb0cae6a0325dc425426",
+      "bytes": 1218428,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f3_teacher_guided.pt": {
+      "sha256": "a0ba5fde2040e1dd9c4d1c5d0696d6864e77d4992fd74edd31e02b5b90db237d",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f3_teacher_guided_stats.npz": {
+      "sha256": "c0c7468e8d7ef4921da964c07049cd414a8e46705add29f38652d43d11edfc73",
+      "bytes": 1216576,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f4_teacher_guided.pt": {
+      "sha256": "a433f0f784a7a89c0da6d8a646463c7b63e24920bba970a9d4c8cc35567c4a71",
+      "bytes": 2385889,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/B_s3_f4_teacher_guided_stats.npz": {
+      "sha256": "52d9ba49bcf044a4b00b8dbcaa58fc5617ac3c1f09cf1e6421e0bab78e0b31f6",
+      "bytes": 1218243,
+      "bundled": true,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/independent_audit.json": {
+      "sha256": "507b38a910edde01d83a545a39f1989fcc28b39abb892560f6912a499d8403f9",
+      "bytes": 303,
+      "bundled": true,
+      "stages": [
+        "replay",
+        "train-v428"
+      ]
+    },
+    "outputs/v428/11-16-142942-full-7b1d79/result.json": {
+      "sha256": "c0a446bdd2ce19c741de5a5db6983ace9c8b0ab4145682fd626071eeea728948",
+      "bytes": 4210,
+      "bundled": true,
+      "stages": [
+        "replay",
+        "train-v428"
+      ]
+    }
+  },
+  "reference_zip_sha256": "d07db73fba4c9c7b0874df89548987def4a28f15064af9ab7f98ed57aff5970f"
+}

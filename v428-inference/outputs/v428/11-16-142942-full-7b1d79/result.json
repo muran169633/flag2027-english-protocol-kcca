@@ -1,0 +1,184 @@
+{
+  "research_only": true,
+  "formal_submission_allowed": false,
+  "teacher": {
+    "0": {
+      "train_bce": 0.21327486634254456,
+      "held_bce": 0.28081557154655457,
+      "checkpoint": "outputs/v427/11-16-140802-full-25f52c/teacher_fold0_finetune.pt"
+    },
+    "1": {
+      "train_bce": 0.22110800445079803,
+      "held_bce": 0.2897849977016449,
+      "checkpoint": "outputs/v427/11-16-140802-full-25f52c/teacher_fold1_finetune.pt"
+    },
+    "2": {
+      "train_bce": 0.21540947258472443,
+      "held_bce": 0.2800962030887604,
+      "checkpoint": "outputs/v427/11-16-140802-full-25f52c/teacher_fold2_finetune.pt"
+    },
+    "3": {
+      "train_bce": 0.21330991387367249,
+      "held_bce": 0.29496538639068604,
+      "checkpoint": "outputs/v427/11-16-140802-full-25f52c/teacher_fold3_finetune.pt"
+    },
+    "4": {
+      "train_bce": 0.213286891579628,
+      "held_bce": 0.2847456634044647,
+      "checkpoint": "outputs/v427/11-16-140802-full-25f52c/teacher_fold4_finetune.pt"
+    }
+  },
+  "control_replay": [
+    {
+      "head": "B_s1_f0",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s2_f0",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s3_f0",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s1_f1",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s2_f1",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s3_f1",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s1_f2",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s2_f2",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s3_f2",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s1_f3",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s2_f3",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s3_f3",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s1_f4",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s2_f4",
+      "max_weight_difference": 0.0
+    },
+    {
+      "head": "B_s3_f4",
+      "max_weight_difference": 0.0
+    }
+  ],
+  "teachers_retrained": false,
+  "imitation": {
+    "source_only": {
+      "held_teacher_bce": 1.8254437446594238,
+      "held_v353_bce": 2.093716859817505
+    },
+    "teacher_guided": {
+      "held_teacher_bce": 0.398649126291275,
+      "held_v353_bce": 0.3426774740219116
+    }
+  },
+  "diagnostics": [
+    {
+      "fold": 0,
+      "protocol": "standard",
+      "source_only": 16.46,
+      "teacher_guided": 17.34,
+      "original": 17.02
+    },
+    {
+      "fold": 0,
+      "protocol": "same_gender",
+      "source_only": 29.099999999999998,
+      "teacher_guided": 29.18,
+      "original": 29.48
+    },
+    {
+      "fold": 1,
+      "protocol": "standard",
+      "source_only": 19.040000000000003,
+      "teacher_guided": 20.1,
+      "original": 18.54
+    },
+    {
+      "fold": 1,
+      "protocol": "same_gender",
+      "source_only": 29.360000000000003,
+      "teacher_guided": 29.439999999999998,
+      "original": 28.28
+    },
+    {
+      "fold": 2,
+      "protocol": "standard",
+      "source_only": 17.34,
+      "teacher_guided": 16.64,
+      "original": 16.0
+    },
+    {
+      "fold": 2,
+      "protocol": "same_gender",
+      "source_only": 28.46,
+      "teacher_guided": 28.62,
+      "original": 28.68
+    },
+    {
+      "fold": 3,
+      "protocol": "standard",
+      "source_only": 16.74,
+      "teacher_guided": 16.1,
+      "original": 17.34
+    },
+    {
+      "fold": 3,
+      "protocol": "same_gender",
+      "source_only": 28.299999999999997,
+      "teacher_guided": 26.619999999999997,
+      "original": 28.939999999999998
+    },
+    {
+      "fold": 4,
+      "protocol": "standard",
+      "source_only": 15.620000000000001,
+      "teacher_guided": 16.46,
+      "original": 15.76
+    },
+    {
+      "fold": 4,
+      "protocol": "same_gender",
+      "source_only": 27.72,
+      "teacher_guided": 27.939999999999998,
+      "original": 27.58
+    }
+  ],
+  "diagnostic_mean": {
+    "original": 22.762,
+    "source_only": 22.814,
+    "teacher_guided": 22.844
+  },
+  "elapsed_seconds": 51.2154448350193,
+  "previous_teacher_guided_mean": 22.932,
+  "previous_source_only_mean": 22.814
+}

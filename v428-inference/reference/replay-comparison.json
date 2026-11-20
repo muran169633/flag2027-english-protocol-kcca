@@ -1,0 +1,26 @@
+{
+  "reference_zip_sha256": "d07db73fba4c9c7b0874df89548987def4a28f15064af9ab7f98ed57aff5970f",
+  "regenerated_zip_sha256": "a504b28fceb87008e2828761cbf729c8f568134c3d2575ed84cabd5c3f48032f",
+  "members": {
+    "gender/sub_score_v4_Bangla_unheard.txt": {
+      "rows": 716,
+      "sha256": "aa7f6c5d4f5e425852305b65e14664e65bda5cb68e00e0c9fd1ca9c55d37fc19",
+      "identical": true
+    },
+    "gender/sub_score_v4_English_heard.txt": {
+      "rows": 416,
+      "sha256": "49f612d440a608fc2acb9dccea8002a7d3b7322a5599a1d3d7eb8bdf1a766750",
+      "identical": true
+    },
+    "no_gender/sub_score_v4_Bangla_unheard.txt": {
+      "rows": 802,
+      "sha256": "d4c43ad1c89fcbd727ce0bc06079372990350ae6c453dd32f331528e8ebc6cc2",
+      "identical": true
+    },
+    "no_gender/sub_score_v4_English_heard.txt": {
+      "rows": 392,
+      "sha256": "20fd35efaaa5c6738e64f413490ea45c034588bc7d448fd3062467f318c0e6cc",
+      "identical": true
+    }
+  }
+}

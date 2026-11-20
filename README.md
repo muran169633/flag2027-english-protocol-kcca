@@ -1,5 +1,7 @@
 # FLAG face–voice verification | English protocol-specific KCCA system
 
+Organizers reviewing CodaBench submission 1054878 can find the v428 checkpoints and replay instructions in [v428-inference](v428-inference/README.md). The rest of this README describes the local KCCA candidate.
+
 This is the English-trained candidate retained by the project on 19 November. On five held-out folds of official English identities it achieved 16.604% standard EER and 27.216% same-gender EER. The mean was 21.910%. The package was evaluated locally. Its official four-condition English–Bangla EER is unknown. [Two-page system description](documents/系统说明.pdf) · [Per-fold results](reference/verified_metrics.json)
 
 Each protocol averages a fixed neural scoring ensemble and an ensemble trained with protocol-specific negative pairs. A regularized radial basis kernel canonical correlation model adds a calibrated score from training-identity centers. The deployed system loads four neural parameter files and five per-fold kernel files. The English-only selection used a prespecified kernel. An earlier multilingual model reached 21.790% on the English trials under a different training setup. Across held-out sources, the candidate improved the English–Urdu four-condition average from 31.038% to 29.967% against the cross-video baseline. The two seven-person Bangla same-gender checks moved in opposite directions. [Paired evaluations](EDA/11-19-公开原声与跨来源更新/output/11-19-核方向跨语逐对验证/核方向与分协议结果.json)

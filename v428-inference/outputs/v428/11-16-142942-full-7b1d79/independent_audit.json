@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "teacher_prediction_max_difference": 8.586520694464639e-08,
+  "source_control_heads_replayed": 15,
+  "history_rows": 6000,
+  "checked_ensemble_scores": 200000,
+  "maximum_eer_difference_pp": 0.0,
+  "teacher_train_pairs": 1448,
+  "teacher_held_pairs": 114,
+  "research_only": true
+}

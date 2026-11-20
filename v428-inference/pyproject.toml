@@ -1,0 +1,56 @@
+[project]
+name = "face-voice"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[project.optional-dependencies]
+train = [
+    "einops==0.8.1",
+    "facenet-pytorch==2.5.3",
+    "ftfy==6.3.1",
+    "h5py==3.14.0",
+    "huggingface-hub==0.35.0",
+    "insightface==1.0.1",
+    "iopath==0.1.10",
+    "librosa==0.11.0",
+    "matplotlib==3.10.6",
+    "numpy==2.2.6",
+    "onnx==1.21.0",
+    "onnxruntime==1.26.0",
+    "opencv-python-headless==4.12.0.88",
+    "pillow==12.3.0",
+    "safetensors==0.6.2",
+    "scikit-learn==1.7.2",
+    "soundfile==0.13.1",
+    "speechbrain==1.0.3",
+    "threadpoolctl==3.6.0",
+    "timm==1.0.26",
+    "torch==2.8.0",
+    "torchaudio==2.8.0",
+    "torchvision==0.23.0",
+    "tqdm==4.70.1",
+    "transformers==4.57.3",
+    "wandb==0.22.2",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pyrefly>=1.4.0",
+    "ruff>=0.17.3",
+    "yt-dlp>=2026.10.26",
+]
+
+[tool.pyrefly]
+project-includes = ["exps/v001/*.py", "exps/v002/*.py", "exps/v003/*.py", "exps/v004/*.py", "exps/v005/*.py", "exps/v006/*.py", "exps/v007/*.py", "exps/v008/*.py", "exps/v009/*.py", "exps/v010/*.py", "exps/v011/*.py", "exps/v012/*.py", "exps/v013/*.py", "exps/v014/*.py", "exps/v015/*.py", "exps/v016/*.py", "exps/v017/*.py", "exps/v018/*.py", "exps/v019/*.py", "exps/v020/*.py", "exps/v021/*.py", "exps/v022/*.py", "exps/v023/*.py", "exps/v024/*.py", "exps/v025/*.py", "exps/v026/*.py", "exps/v027/*.py", "exps/v028/*.py", "exps/v029/*.py", "exps/v030/*.py", "exps/v031/*.py", "exps/v032/*.py", "exps/v033/*.py", "exps/v034/*.py", "exps/v035/*.py", "exps/v036/*.py", "exps/v037/*.py", "exps/v038/*.py", "exps/v039/*.py", "exps/v040/*.py", "exps/v041/*.py"]
+python-interpreter-path = "/home/xxc/miniconda3/envs/my_project_env/bin/python"
