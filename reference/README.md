@@ -1,6 +1,6 @@
 # FLAG 2027 inference
 
-This package contains the 15 frozen model checkpoints and their 15 Gaussian scoring parameter files for replay of CodaBench entry **1054878**, which recorded a mean EER of **9.87%**. The checkpoints were fitted with soft targets from a v427 teacher whose supervision came from joint scoring of Evaluation samples. The package documents the recorded submission for organizer inspection.
+This package contains the 15 frozen model checkpoints and their 15 Gaussian scoring parameter files for replay of CodaBench entry **1054878**, which recorded a mean EER of **9.87%**. Training for this submission used supervision derived from joint scoring of Evaluation samples. The procedure is disclosed for compliance review. [Archived run record](weights/result.json)
 
 ## Run the replay
 
