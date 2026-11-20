@@ -16,15 +16,14 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 import numpy as np
 import torch
+from inference.model import embed, load_checkpoint, score
 from threadpoolctl import threadpool_limits
-
-from exps.v428.run import embed, load_checkpoint, score
 
 
 def main() -> None:
     """真实加载15个蒸馏学生并评分，完整检查后保存研究ZIP。"""
-    here = Path(__file__).resolve().parent
-    root = here.parents[1]
+    here = Path(__file__).absolute().parent
+    root = here.parent
     cfg = json.loads((here / "config.json").read_text())
     package = cfg["package"]
     assert sys.prefix == cfg["python_prefix"]
@@ -63,7 +62,7 @@ def main() -> None:
             return data[spec[1]].astype(np.float32)
 
     record(Path(__file__))
-    record(here / "run.py")
+    record(here / "model.py")
     record(here / "config.json")
     record(source / "result.json")
     (out / "config.json").write_text(json.dumps(cfg, ensure_ascii=False, indent=2))

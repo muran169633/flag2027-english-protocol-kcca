@@ -4,9 +4,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import importlib
 import json
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -41,15 +39,10 @@ def configure(path: Path, keys: tuple[str, ...], value: str) -> None:
         path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n")
 
 
-def prepare(repo: Path, work: Path, resources: Path, fit: bool) -> None:
+def prepare(repo: Path, work: Path, resources: Path) -> None:
     inventory: Inventory = json.loads((repo / "resources.json").read_text())
-    stages = {"replay"}
-    if fit:
-        stages.update(("train-v427", "train-v428"))
     files: dict[str, Path] = {}
     for name, item in inventory["paths"].items():
-        if not stages.intersection(item["stages"]):
-            continue
         path = (repo if item["bundled"] else resources) / name
         if not path.is_file():
             raise FileNotFoundError(f"Required review input is missing: {path}")
@@ -62,53 +55,18 @@ def prepare(repo: Path, work: Path, resources: Path, fit: bool) -> None:
     if digest(expected_zip) != inventory["reference_zip_sha256"]:
         raise ValueError(f"Reference ZIP checksum mismatch: {expected_zip}")
     work.mkdir(parents=True, exist_ok=False)
-    for exp in ("v427", "v428") if fit else ("v428",):
-        shutil.copytree(
-            repo / "exps" / exp,
-            work / "exps" / exp,
-            ignore=shutil.ignore_patterns("__pycache__"),
-        )
     for name, src in files.items():
         dest = work / name
-        if dest.is_file():
-            continue
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.symlink_to(src)
-    for config in (work / "exps").glob("*/config.json"):
-        configure(config, ("python_prefix",), sys.prefix)
+        if name == "inference/config.json":
+            dest.write_bytes(src.read_bytes())
+        else:
+            dest.symlink_to(src)
+    configure(work / "inference/config.json", ("python_prefix",), sys.prefix)
     print(
         f"Verified {len(files)} archived inputs and the reference ZIP. Workspace: {work}",
         flush=True,
     )
-
-
-def fit_stage(work: Path, exp: str) -> Path:
-    out = work / "outputs" / exp
-    before = set(out.glob("*-full-*"))
-    subprocess.run(
-        [sys.executable, "-m", f"exps.{exp}.run", "--mode", "full"],
-        cwd=work,
-        check=True,
-    )
-    runs = set(out.glob("*-full-*")) - before
-    if len(runs) != 1:
-        raise RuntimeError(f"Expected one new complete {exp} run, found {len(runs)}")
-    relative = runs.pop().relative_to(work)
-    subprocess.run(
-        [sys.executable, str(Path(__file__).resolve()), "_audit", exp, str(relative)],
-        cwd=work,
-        check=True,
-    )
-    return relative
-
-
-def audit(exp: str, run: str) -> None:
-    if exp not in {"v427", "v428"}:
-        raise ValueError(f"Unknown stage: {exp}")
-    sys.path.insert(0, str(Path.cwd()))
-    module = importlib.import_module(f"exps.{exp}.audit")
-    module.CONFIG["run"] = run
-    module.main()
 
 
 def compare(work: Path, reference: Path, actual: Path) -> None:
@@ -136,11 +94,8 @@ def compare(work: Path, reference: Path, actual: Path) -> None:
 
 
 def main() -> None:
-    if len(sys.argv) == 4 and sys.argv[1] == "_audit":
-        audit(sys.argv[2], sys.argv[3])
-        return
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("replay", "prepare-fit", "fit"))
+    parser.add_argument("mode", choices=("replay",))
     parser.add_argument(
         "--resources",
         required=True,
@@ -158,16 +113,9 @@ def main() -> None:
     work = args.work.resolve()
     if work.exists():
         parser.error(f"Please choose an unused --work path: {work}")
-    prepare(repo, work, args.resources.resolve(), fit=args.mode != "replay")
-    if args.mode == "prepare-fit":
-        return
-    config = work / "exps/v428/config.json"
-    if args.mode == "fit":
-        earlier = fit_stage(work, "v427")
-        configure(config, ("teacher_run",), earlier.as_posix())
-        latest = fit_stage(work, "v428")
-        configure(config, ("package", "source_run"), latest.as_posix())
-    subprocess.run([sys.executable, "-m", "exps.v428.package"], cwd=work, check=True)
+    prepare(repo, work, args.resources.resolve())
+    config = work / "inference/config.json"
+    subprocess.run([sys.executable, "-m", "inference.package"], cwd=work, check=True)
     actual = work / json.loads(config.read_text())["package"]["destination"]
     compare(work, repo / "reference/submitted.zip", actual)
 

@@ -1,0 +1,84 @@
+{
+  "batch_size": 2048,
+  "bn_epsilon": 1e-05,
+  "cpu_threads": 2,
+  "device": "cuda:0",
+  "eval_features": {
+    "face": [
+      [
+        "outputs/v381/features/eval_faces_generic.npz",
+        "clip"
+      ],
+      [
+        "outputs/v382/features/eval_faces_large.npz",
+        "clipL"
+      ]
+    ],
+    "voice": [
+      [
+        "outputs/v379/features/eval_voices_wavlm.npz",
+        "wavlm"
+      ],
+      [
+        "outputs/v379/features/eval_voices.npz",
+        "ecapa"
+      ],
+      [
+        "outputs/v379/features/eval_voices.npz",
+        "eres"
+      ],
+      [
+        "outputs/v379/features/eval_voices.npz",
+        "resnet"
+      ],
+      [
+        "outputs/v383/features/eval_voices_generic.npz",
+        "whisper"
+      ],
+      [
+        "outputs/v383/features/eval_voices_generic.npz",
+        "age6"
+      ]
+    ]
+  },
+  "eval_metadata": {
+    "face": "outputs/v379/features/eval_faces.json",
+    "voice": "outputs/v379/features/eval_voices.json"
+  },
+  "evaluation_manifest": "data/FLAG_2027/derived/evaluation_phase/manifest.json",
+  "expected_eval_rows": 2326,
+  "experiment_id": "v428",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "formal_submission_allowed": false,
+  "gpu_fraction": 0.2,
+  "max_seconds": 900,
+  "output_root": "replay-logs",
+  "package": {
+    "source_run": "weights",
+    "student_arm": "teacher_guided",
+    "destination": "evaluation/predictions.zip",
+    "reference_zip": "reference/submitted.zip",
+    "distance_scale": 50.0,
+    "decimals": 12,
+    "expected_counts": {
+      "no_gender/English": 392,
+      "no_gender/Bangla": 802,
+      "gender/English": 416,
+      "gender/Bangla": 716
+    },
+    "expected_heads": 15
+  },
+  "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "research_only": true,
+  "seeds": [
+    1,
+    2,
+    3
+  ]
+}
