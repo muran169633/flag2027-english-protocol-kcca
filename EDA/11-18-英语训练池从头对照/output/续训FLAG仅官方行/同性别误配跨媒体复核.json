@@ -1,0 +1,52 @@
+[
+  {
+    "fold": 0,
+    "eligible_pairs": 86,
+    "hard_pairs": 17,
+    "all_trials": 1224,
+    "eligible_trials": 1224,
+    "hard_trials": 262,
+    "eligible_errors": 340,
+    "hard_errors": 200
+  },
+  {
+    "fold": 1,
+    "eligible_pairs": 86,
+    "hard_pairs": 17,
+    "all_trials": 1207,
+    "eligible_trials": 1207,
+    "hard_trials": 245,
+    "eligible_errors": 347,
+    "hard_errors": 164
+  },
+  {
+    "fold": 2,
+    "eligible_pairs": 85,
+    "hard_pairs": 17,
+    "all_trials": 1191,
+    "eligible_trials": 1184,
+    "hard_trials": 244,
+    "eligible_errors": 365,
+    "hard_errors": 185
+  },
+  {
+    "fold": 3,
+    "eligible_pairs": 86,
+    "hard_pairs": 17,
+    "all_trials": 1165,
+    "eligible_trials": 1165,
+    "hard_trials": 230,
+    "eligible_errors": 331,
+    "hard_errors": 162
+  },
+  {
+    "fold": 4,
+    "eligible_pairs": 86,
+    "hard_pairs": 17,
+    "all_trials": 1176,
+    "eligible_trials": 1176,
+    "hard_trials": 256,
+    "eligible_errors": 332,
+    "hard_errors": 211
+  }
+]

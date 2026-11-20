@@ -1,0 +1,125 @@
+{
+  "experiment_id": "v114",
+  "output_root": "outputs",
+  "default_mode": "intake",
+  "seed": 11407,
+  "cpu_threads": 2,
+  "gpu_memory_fraction": 0.2,
+  "deadline": "2026-11-08T10:00:00+08:00",
+  "upstream_repository": "https://github.com/mk-minchul/AdaFace",
+  "upstream_commit": "c60eaa786a42c03444f3df7096dbaf9d57ae010d",
+  "upstream_root": "refs/AdaFace/c60eaa786a42c03444f3df7096dbaf9d57ae010d",
+  "weight_root": "data/pretrained/adaface/ir101_webface12m/c60eaa786a42c03444f3df7096dbaf9d57ae010d",
+  "weight_filename": "adaface_ir101_webface12m.ckpt",
+  "official_file_id": "1dswnavflETcnAuplZj1IOKKP0eM8ITgT",
+  "download_base": "https://drive.usercontent.google.com/download",
+  "connect_timeout_seconds": 20,
+  "read_timeout_seconds": 45,
+  "maximum_download_bytes": 2000000000,
+  "maximum_download_seconds": 1800,
+  "chunk_bytes": 1048576,
+  "download_log_bytes": 33554432,
+  "compliance": "官方公开人脸预训练，仅提取无语义身份表示，不使用类别名或外部身份资料；研究Only，未提交",
+  "model_channels": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "model_blocks": [
+    3,
+    13,
+    30,
+    3
+  ],
+  "stage_stride": 2,
+  "input_channels": 3,
+  "model_dropout": 0.4,
+  "recognition_size": 112,
+  "face_dimension": 512,
+  "reference_batch_size": 2,
+  "reference_tolerance": 1e-05,
+  "expected_weight_sha256": "0e7a3238d2a50f3fe3860782534928ac7cb2598977cf897f6869fd5ac2493fd0",
+  "model_state_prefix": "model.",
+  "reference_model_name": "ir_101",
+  "allow_tf32": false,
+  "face_weights_root": "data/pretrained/identitynet/arcface/antelopev2-v0.7",
+  "detection_file": "scrfd_10g_bnkps.onnx",
+  "detection_size": [
+    320,
+    320
+  ],
+  "detection_threshold": 0.35,
+  "nms_threshold": 0.4,
+  "center_penalty": 2.0,
+  "onnx_providers": [
+    "CPUExecutionProvider"
+  ],
+  "inter_threads": 1,
+  "onnx_log_severity": 3,
+  "device": "cuda:0",
+  "normalization_mean": 0.5,
+  "normalization_std": 0.5,
+  "pixel_scale": 255.0,
+  "face_batch_size": 16,
+  "smoke_face_count": 2,
+  "feature_log_interval": 128,
+  "feature_resume_runs": [
+    "outputs/v114/11-07-122048-6e8665"
+  ],
+  "time_limit_seconds": 3600,
+  "actual_reference_checks": 2,
+  "sources": [
+    {
+      "name": "historical_crosslanguage",
+      "manifest": "outputs/v055/11-06-202706-28f41e/manifest.json"
+    },
+    {
+      "name": "official_train",
+      "manifest": "outputs/v068/11-07-033102-f03e3c/manifest.json"
+    },
+    {
+      "name": "historical_expanded",
+      "manifest": "outputs/v108/11-07-082915-05deb5/manifest.json"
+    },
+    {
+      "name": "crema_known",
+      "manifest": "outputs/v077/11-07-054220-5bd77d/manifest.json"
+    },
+    {
+      "name": "ravdess_all",
+      "manifest": "outputs/v123/11-07-115350-c2b0c0/manifest.json"
+    },
+    {
+      "name": "flag_dev_unlabelled",
+      "manifest": "outputs/v066/11-07-025153-b764e7/manifest.json"
+    },
+    {
+      "name": "historical_low_resource",
+      "manifest": "outputs/v132/11-07-121742-0078e5/manifest.json"
+    }
+  ],
+  "feature_parameter_keys": [
+    "model_channels",
+    "model_blocks",
+    "stage_stride",
+    "input_channels",
+    "model_dropout",
+    "recognition_size",
+    "face_dimension",
+    "normalization_mean",
+    "normalization_std",
+    "pixel_scale",
+    "detection_size",
+    "detection_threshold",
+    "nms_threshold",
+    "center_penalty",
+    "onnx_providers",
+    "allow_tf32",
+    "device"
+  ],
+  "wandb_project": "FLAG-IdentityNet",
+  "wandb_mode": "offline",
+  "plot_font_file": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+  "plot_dpi": 140
+}

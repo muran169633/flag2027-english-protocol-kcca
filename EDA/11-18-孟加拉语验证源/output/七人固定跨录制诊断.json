@@ -1,0 +1,360 @@
+{
+  "model": "Seeking the Shape of Sound; original frozen cosine",
+  "summary": {
+    "all": {
+      "positive": 7,
+      "negative": 42,
+      "eer": 38.095238095238095
+    },
+    "same_gender": {
+      "positive": 7,
+      "negative": 18,
+      "eer": 42.85714285714286
+    }
+  },
+  "trials": [
+    {
+      "face_id": "id00815",
+      "voice_id": "id00815",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.08524753153324127
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.07266848534345627
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.08599113672971725
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.12812262773513794
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.04894600063562393
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.05326859652996063
+    },
+    {
+      "face_id": "id00815",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.1001783013343811
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.09012826532125473
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id03573",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.09824167191982269
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.06969791650772095
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.1278262734413147
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.059869345277547836
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.08879993855953217
+    },
+    {
+      "face_id": "id03573",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.10918441414833069
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.32411956787109375
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.26887327432632446
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id04377",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.21490487456321716
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.16678540408611298
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.25325772166252136
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.06540972739458084
+    },
+    {
+      "face_id": "id04377",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.3284364640712738
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.02458248659968376
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.03431536257266998
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.09109078347682953
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id04863",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.05743696913123131
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.03952786698937416
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": true,
+      "similarity": -0.0048781163059175014
+    },
+    {
+      "face_id": "id04863",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.0024633295834064484
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.17027467489242554
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.1363036334514618
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.2241460233926773
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.16727286577224731
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id06759",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.21434912085533142
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.08414728939533234
+    },
+    {
+      "face_id": "id06759",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.18551242351531982
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.07126453518867493
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.08741689473390579
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": true,
+      "similarity": -0.07200227677822113
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": true,
+      "similarity": -0.16232410073280334
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": true,
+      "similarity": -0.07496138662099838
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id07615",
+      "label": 1,
+      "same_gender": true,
+      "similarity": -0.07039667665958405
+    },
+    {
+      "face_id": "id07615",
+      "voice_id": "id08395",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.10419107973575592
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id00815",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.07353851199150085
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id03573",
+      "label": 0,
+      "same_gender": true,
+      "similarity": 0.07357188314199448
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id04377",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.007556671276688576
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id04863",
+      "label": 0,
+      "same_gender": false,
+      "similarity": -0.05261590704321861
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id06759",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.03073621727526188
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id07615",
+      "label": 0,
+      "same_gender": false,
+      "similarity": 0.02424640953540802
+    },
+    {
+      "face_id": "id08395",
+      "voice_id": "id08395",
+      "label": 1,
+      "same_gender": true,
+      "similarity": 0.09915868937969208
+    }
+  ]
+}

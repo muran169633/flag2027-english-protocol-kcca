@@ -1,0 +1,285 @@
+{
+  "parameters": {
+    "EDA/11-18-跨录制协方差迁移/output/纯英语移除eres评分参数.npz": "ac02ce0330c7691ec5832d4db996e0bb6f2d7b289a027e5270e203e848e3bfdc",
+    "EDA/11-18-跨语言协议训练/output/11-18-190906-production/count_matched/standard_parameters.npz": "660fb527ed063f8ee7c590f5d04d4429b5e6bddd4fe4f880db44e8bfa174fe2c",
+    "EDA/11-18-跨录制协方差迁移/output/纯英语评分参数.npz": "f8de1ad622852ee3f4d8ddfec04f8e5aacada964413df777bba34c0f874a8469",
+    "EDA/11-18-跨语言协议训练/output/11-18-190906-production/same_gender/same_gender_parameters.npz": "64e0a332a9cabc0a494cd1882b4f70a437c5ae5f5274187a0839db4e53ef780a",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold0/rbf.npz": "39aa6320500d41890bc8a9d4dbb78942905919ba9f470eb527baa1f13bfc304e",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold1/rbf.npz": "473bb28ebd9cd25406d565c25060435508a5d16b3c017901aeb16dcb7b341253",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold2/rbf.npz": "dc9f102389f91ea91c2544b021be5d87c62fea42c58745be5682b87caaf94d99",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold3/rbf.npz": "e02853e087117b28fb9db85acc57c79d22b646a088afdc65202347048bf6c788",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold4/rbf.npz": "39bb2a6bb4b92dfac9d687f1de9a18778670edee6926c842944a1a31a2d90879"
+  },
+  "external_resources": {
+    "outputs/v379/features/eval_faces.json": {
+      "sha256": "b352d00d1a4722941df86b494923c3cfd8ce6e7c8ed6ad8a0a8ef7d6606a163b",
+      "bytes": 385592,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v381/features/eval_faces_generic.npz": {
+      "sha256": "2a713c431d3b7b370b3085f06d08d173dffb7c8c737ba57369ab842c568bcdf4",
+      "bytes": 11909622,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v382/features/eval_faces_large.npz": {
+      "sha256": "850a8ccd0cfeac0e911b3df30db3671d8f6e5b2b16d978d948da736073d0fd5e",
+      "bytes": 14291452,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v379/features/eval_voices.json": {
+      "sha256": "4c8ccc092540c4326a51f5c5fe835ee85cffbf729ef5c4f0119d1d320e7d5f3a",
+      "bytes": 387918,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v379/features/eval_voices_wavlm.npz": {
+      "sha256": "b3a641f84ff55ccb1a500f13edbc75ac509b53b66e39b53da9d02a64a516c0d3",
+      "bytes": 4763912,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v379/features/eval_voices.npz": {
+      "sha256": "6aa4628d0d409eaf53b3d65405c61389b7082ac5e88c20e6b1c3471bec8add78",
+      "bytes": 5955308,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v383/features/eval_voices_generic.npz": {
+      "sha256": "35ff7900efb15bbf5543174cb5765cf6c7c787e1a9a753dc4f8cff54ff22e986",
+      "bytes": 16673276,
+      "stages": [
+        "replay"
+      ]
+    },
+    "data/FLAG_2027/evaluation_phase/no_gender/English_valid.txt": {
+      "sha256": "d2b51e147d41a925e343b7424c8bddbc777fb8687d73ba35a3fee040f9086ed8",
+      "bytes": 27440,
+      "stages": [
+        "replay"
+      ]
+    },
+    "data/FLAG_2027/evaluation_phase/no_gender/Bangla_valid.txt": {
+      "sha256": "3e9c7a3c58022b8440eb8708fe2139e86d36f209930534d0a58004576ffee8e8",
+      "bytes": 54536,
+      "stages": [
+        "replay"
+      ]
+    },
+    "data/FLAG_2027/evaluation_phase/gender/English_valid.txt": {
+      "sha256": "c80040de35730ceb9fa56a1228a9ed5c3ab317138951b936a1d4eb926e968ace",
+      "bytes": 29120,
+      "stages": [
+        "replay"
+      ]
+    },
+    "data/FLAG_2027/evaluation_phase/gender/Bangla_valid.txt": {
+      "sha256": "5b4836ac8b1c9c0fa255c8d01946c054f4d732e9ffb2763525ba4700ab0a8a28",
+      "bytes": 48688,
+      "stages": [
+        "replay"
+      ]
+    },
+    "outputs/v379/features/train_faces.json": {
+      "sha256": "a5da31e0fe9359929391eddce065c4b95254fb08f2232ac3251d3d6bdf8e45de",
+      "bytes": 3937737,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v380/features/vox2t_faces.json": {
+      "sha256": "29398b7ea89b01372734cec5b1286203dc0cf92f93535d77fd0296099aa2022f",
+      "bytes": 1206198,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v379/features/train_voices.json": {
+      "sha256": "4c273ec4ea93932d26993221c3d27a55cb5bf7a9d33129260e66293960165043",
+      "bytes": 4789451,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v380/features/vox2t_voices.json": {
+      "sha256": "37f6b526283b11c948fddaa8e34e077ba057f49b52f95da7c96ddd02a6147894",
+      "bytes": 599908,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v381/features/train_faces_generic.npz": {
+      "sha256": "2153cf6ce069e10b4a536b86d30326187027d98fa2850a81dd0fbd352eaa0910",
+      "bytes": 107904502,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v381/features/vox2t_faces_generic.npz": {
+      "sha256": "6a242bb8b6a35a62bac22f40d7f5bb728ba7b14645dfbd205017d89a38214012",
+      "bytes": 32676342,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v379/features/train_voices_wavlm.npz": {
+      "sha256": "6b31f2effd37b643fceec10a1d84dce7fa7d9ce43d3822fc075f77ef335b9dd4",
+      "bytes": 52142344,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v379/features/train_voices.npz": {
+      "sha256": "09be5aec38148246d7fbd978b0c1d3f3daada1907fe68d84a116eb7bc4bfa7dd",
+      "bytes": 65178348,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v383/features/train_voices_generic.npz": {
+      "sha256": "15c5cc6a2d947e137787c11a6951a9dfde101f50b36eb814bd7a1ce3133883c4",
+      "bytes": 182497788,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v380/features/vox2t_voices.npz": {
+      "sha256": "4b6915b6855e26b13422372d3ea9037f9481167da941a18bb7c23e0c431d61e0",
+      "bytes": 14705118,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v383/features/vox2t_voices_generic.npz": {
+      "sha256": "392c955ef63407243e96064e93c30775c24673ec17685b51e07903b199504dba",
+      "bytes": 22873596,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v382/features/train_faces_large.npz": {
+      "sha256": "d67e751627c970bf8f6b2fb4e50efa8df37efefeb1961f94f022d21516176562",
+      "bytes": 129485308,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v382/features/vox2t_faces_large.npz": {
+      "sha256": "630cd1cde615ac65bfadd209805bd5f6b9845691cc7e1683ccbdaf54d90364c1",
+      "bytes": 39211516,
+      "stages": [
+        "fit"
+      ]
+    },
+    "data/MAV_Celeb_history/mavceleb_v1_complete/meta_v1.csv": {
+      "sha256": "3b311af585dd3e02050c551bcc889cbc47f742f7893e6ac48281d0ca85a8da53",
+      "bytes": 2224,
+      "stages": [
+        "fit"
+      ]
+    },
+    "data/FLAG_2027/meta_file_train_set.csv": {
+      "sha256": "fd7991a3353b9f90b2120b8d79fdf50ebaef6438c2e128be162ffbbf6d29c030",
+      "bytes": 560,
+      "stages": [
+        "fit"
+      ]
+    },
+    "data/external/voxceleb2_test/vox2_meta.csv": {
+      "sha256": "9a4f437fcf78b8030e597941703ab82a4d1af314f6eba3952afafe8a3664bd1b",
+      "bytes": 159126,
+      "stages": [
+        "fit"
+      ]
+    },
+    "outputs/v068/11-07-033102-f03e3c/manifest.json": {
+      "sha256": "370a378448465f7d04be795f1e0b3c0b54f55c9846bf5977b0539aa3df7e3880",
+      "bytes": 3578612,
+      "stages": [
+        "fit"
+      ]
+    },
+    "EDA/11-18-孟加拉语验证源/output/七人原始特征.npz": {
+      "sha256": "96da88443e849bdfddf2436662b55bd2c3cd87553f7b632d7dd7f70449d0391b",
+      "bytes": 138766,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "EDA/11-18-孟加拉语验证源/output/七人原始特征交换录制.npz": {
+      "sha256": "7d9058031030e853d9683dcc06fb08a466e83d893b4783575c22c263f5a17317",
+      "bytes": 138769,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/face_v399.npz": {
+      "sha256": "4706b92aced65423c099474103c31c86317d24fe0ccef7d97b1f362997e91968",
+      "bytes": 932344,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/voice_core_v399.npz": {
+      "sha256": "a783e7e352452b615c19c5ac78fe37369f5379d553fccb8be790d3155ff2416d",
+      "bytes": 839646,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/voice_attrs_v399.npz": {
+      "sha256": "53cf05fed1349c3b1861197471b215e447f45f25cfc8caae98f39235654c3b57",
+      "bytes": 1305084,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/faces.json": {
+      "sha256": "312cc81c85ca373fdeaa6816b4fb8f6bcf872d1bb27e7cfdf80a6b1e14530728",
+      "bytes": 39315,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/voices.json": {
+      "sha256": "2254d8495d8da37c6f7fb7e2a553f7b001abcb4bf38522b3fd7cf63264df72fd",
+      "bytes": 39497,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/cross_video_trials_standard.npz": {
+      "sha256": "3387f203d65b8b6cc674f0ef35c3781ef7b52ed21926ca38aebdb621b29f1c2b",
+      "bytes": 7177,
+      "stages": [
+        "original-diagnostics"
+      ]
+    },
+    "outputs/research/11-13-msm-native-transfer/crema_stress/cross_video_trials_same_gender.npz": {
+      "sha256": "ba5dcb3935d9bcf04ed1bcb9e732539fbc0c4b05194fc291ebad3526a25487ae",
+      "bytes": 7165,
+      "stages": [
+        "original-diagnostics"
+      ]
+    }
+  },
+  "validation_scores": {
+    "path": "EDA/11-19-公开原声与跨来源更新/output/11-19-核方向跨语逐对验证/所有独立配对分数.npz",
+    "sha256": "d46474a16005fc6b06ae35846a4a5a1892de8b2af78e558b9ae801c776f26e96"
+  },
+  "package_sha256": "faf1c779c4a86b3dbe5b1a9c09ac5a5c35f3e348c9ffc0f5526afbf5bfcd2ec3",
+  "cells": {
+    "no_gender/sub_score_v4_English_heard.txt": 392,
+    "no_gender/sub_score_v4_Bangla_unheard.txt": 802,
+    "gender/sub_score_v4_English_heard.txt": 416,
+    "gender/sub_score_v4_Bangla_unheard.txt": 716
+  }
+}

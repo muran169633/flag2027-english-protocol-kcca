@@ -1,0 +1,141 @@
+{
+  "sample_rate": 16000,
+  "max_audio_seconds": 6.0,
+  "mel_bins": 80,
+  "fbank_dither": 0.0,
+  "channels": 64,
+  "blocks": [
+    3,
+    4,
+    6,
+    3
+  ],
+  "base_width": 26,
+  "scale": 2,
+  "expansion": 2,
+  "embedding_size": 192,
+  "fusion_reduction": 4,
+  "relu_max": 20,
+  "pooling_epsilon": 1e-08,
+  "reference_frames": 130,
+  "reference_tolerance": 1e-06,
+  "reference_root": "refs/3D-Speaker/065629c313eaf1a01c65c640c46d77e61e9607b4",
+  "source_commit": "065629c313eaf1a01c65c640c46d77e61e9607b4",
+  "weights_root": "data/pretrained/eres2netv2/v1.0.1",
+  "weights_file": "pretrained_eres2netv2.ckpt",
+  "weights_sha256": "0eb4057106b2573dd7b132cf0c36273ab29afd192c1610f80baa9c556dbb963c",
+  "time_limit_seconds": 900,
+  "ecapa_weights": "data/pretrained/ecapa/embedding_model.ckpt",
+  "ecapa_channels": [
+    512,
+    512,
+    512,
+    512,
+    1536
+  ],
+  "ecapa_kernels": [
+    5,
+    3,
+    3,
+    3,
+    1
+  ],
+  "ecapa_dilations": [
+    1,
+    2,
+    3,
+    4,
+    1
+  ],
+  "ecapa_attention_channels": 128,
+  "audio_mels": 80,
+  "normalization_type": "sentence",
+  "normalization_std": false,
+  "minimum_audio_samples": 400,
+  "weights_bytes": 71768231,
+  "model_id": "iic/speech_eres2netv2_sv_zh-cn_16k-common",
+  "model_revision": "v1.0.1",
+  "device": "cuda:0",
+  "gpu_memory_fraction": 0.2,
+  "cpu_threads": 2,
+  "allow_tf32": false,
+  "feature_log_interval": 64,
+  "face_weights_root": "data/pretrained/identitynet/arcface/antelopev2-v0.7",
+  "recognition_file": "glintr100.onnx",
+  "detection_file": "scrfd_10g_bnkps.onnx",
+  "face_dimension": 512,
+  "recognition_size": 112,
+  "detection_size": [
+    320,
+    320
+  ],
+  "detection_threshold": 0.35,
+  "nms_threshold": 0.4,
+  "center_penalty": 2.0,
+  "onnx_providers": [
+    "CPUExecutionProvider"
+  ],
+  "onnx_log_severity": 3,
+  "inter_threads": 1,
+  "batch_size": 8,
+  "experiment_id": "v066",
+  "output_root": "outputs",
+  "calibration_run": "outputs/v062/11-07-014148-34ca5e/outer_calibration",
+  "seed": 6417,
+  "factors": [
+    0.85,
+    1.0,
+    1.15
+  ],
+  "smoothing": 0.5,
+  "default_mode": "all",
+  "voice_profile_rows": 64,
+  "smoke_rows_per_cell": 4,
+  "face_check_rows": 8,
+  "face_check_tolerance": 1e-05,
+  "face_cache_run": "outputs/v017/11-05-183442-8669fb",
+  "entities_manifest": "outputs/v040/11-06-133914-8890b9/entities.json",
+  "development_root": "data/FLAG_2027/dev_set",
+  "cells": [
+    {
+      "track": "no_gender",
+      "language": "English",
+      "rows": 1008,
+      "condition": "heard"
+    },
+    {
+      "track": "no_gender",
+      "language": "Bangla",
+      "rows": 1406,
+      "condition": "unheard"
+    },
+    {
+      "track": "gender",
+      "language": "English",
+      "rows": 982,
+      "condition": "heard"
+    },
+    {
+      "track": "gender",
+      "language": "Bangla",
+      "rows": 1468,
+      "condition": "unheard"
+    }
+  ],
+  "graph_reference_run": "outputs/v064/11-07-015924-fb4b48",
+  "profile_margin": 3.0,
+  "profile_extra_seconds": 90,
+  "compression_level": 6,
+  "delivery_path": "submission.zip",
+  "versioned_delivery_path": "submission_v066.zip",
+  "previous_archive_prefix": "submission_previous",
+  "score_decimals": 10,
+  "score_direction": "distance_lower_is_match",
+  "platform_snapshot": "refs/FLAG_2027/11-05-platform.json",
+  "official_evaluator": "refs/FLAG_2027/challenge/eval_submission.py",
+  "methods": [
+    "ecapa_wccn",
+    "eres_wccn",
+    "equal_concat"
+  ]
+}

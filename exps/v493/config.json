@@ -1,0 +1,36 @@
+{
+  "protocols": [
+    "English_to_Hindi",
+    "Hindi_to_English",
+    "English_to_English",
+    "Hindi_to_Hindi"
+  ],
+  "flag_protocols": [
+    "standard",
+    "same_gender"
+  ],
+  "parent": "outputs/research/11-14-v382-v2-source-holdout/20261114T160252Z-scoring",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "output_root": "outputs",
+  "experiment_id": "v493",
+  "strong": "outputs/v480/11-18-104532-full-e32206",
+  "split": "outputs/research/11-14-v382-dinov3-bce-extension/20261114T151902Z-full",
+  "arms": [
+    "gaussian",
+    "shared",
+    "independent"
+  ],
+  "wandb_project": "flag-face-voice"
+}

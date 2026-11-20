@@ -1,0 +1,76 @@
+{
+  "spec": {
+    "production": "EDA/11-18-跨语言协议训练/output/11-18-190906-production",
+    "actors": "EDA/11-19-公开原声与跨来源更新/output/11-19-演员等量两拍",
+    "lombard": "EDA/11-19-公开原声与跨来源更新/output/11-19-全员正面相机",
+    "release": "EDA/11-19-公开原声与跨来源更新/output/11-19-英语候选同配对复核/英语候选同配对复核.json",
+    "seed": 2026111973,
+    "inner_groups": 4,
+    "media_per_person": 3,
+    "paired_negatives": 8,
+    "ridge_ratio": 0.01,
+    "dimensions": 32,
+    "calibration_c": 1.0,
+    "models": [
+      "rbf",
+      "linear",
+      "permuted"
+    ],
+    "primary": "specialist_plus_rbf",
+    "comparisons": [
+      [
+        "specialist",
+        "current"
+      ],
+      [
+        "midpoint",
+        "current"
+      ],
+      [
+        "specialist",
+        "same_gender"
+      ],
+      [
+        "specialist_plus_rbf",
+        "current"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist_plus_permuted"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist_plus_linear"
+      ],
+      [
+        "rbf",
+        "permuted"
+      ],
+      [
+        "rbf",
+        "linear"
+      ]
+    ],
+    "design": "复核现有普通、同来源随机负例、同来源同性别负例系统，并固定用随机负例处理标准协议、同性别负例处理同性别协议。该选择参考过英语五折和七人孟语，另用两份孟语作家录音、陌生演员和跨日来源确认。新分支只对训练人物拟合正则化核典型相关分析，各脸声特征块先独立单位化，各人各录制等权，只从训练人物确定核带宽。比较径向基核、线性核和同来源同性别内置换训练对应。每种分支从训练人物内部四组留身份预测拟合分协议对数胜算。新分支的对数胜算以一倍系数加到冻结协议专用系统原始分数。主分析为按每对独立推理的分协议系统加径向基核，权重和带宽均不根据评测来源选择。另训练整库排除 v1/v2 的独立版本及仅本折官方英语训练的独立分支。"
+  },
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "argv": [
+    "EDA/11-19-公开原声与跨来源更新/anchor_train.py",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折"
+  ],
+  "python": "/home/xxc/miniconda3/envs/my_project_env/bin/python",
+  "prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "split_sha256": "d34a657932d062e7cbc6a870a8cb460fb55e10889fe15ccbbd563742be9b9b90",
+  "english_pool_sha256": "ab139cd2fc9324c0f3d1706b11ae3bf2978e51a3fac2356d43bf522da792a8c3",
+  "screening_sha256": "73f2c2eb867e659a8fe71e8dae567360658c4e77c5a545cacdc8bca9c9b2d3fe"
+}

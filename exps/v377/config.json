@@ -1,0 +1,237 @@
+{
+  "experiment_id": "v377",
+  "training_python": "/home/xxc/miniconda3/envs/my_project_env/bin/python",
+  "output_root": "outputs",
+  "mode": "full",
+  "cpu_threads": 4,
+  "compute_budget_seconds": 480,
+  "seed": 11377,
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "expected_rows": 6485,
+  "expected_speakers": 70,
+  "inputs": {
+    "official_cache_manifest": {
+      "path": "data/FLAG_2027/derived/official_v4/manifest.json",
+      "sha256": "bbff8f905f8cb9995616f0f6906322c6fa894bd733922891c012a926a1309709"
+    },
+    "train_list": {
+      "path": "data/FLAG_2027/train_set/train_set/train_English.txt",
+      "sha256": "9da76d23473dabc1e8822c99d1f24398bd5222a382b50efdeaa87bb9b9222d5e"
+    },
+    "gender_csv": {
+      "path": "data/FLAG_2027/meta_file_train_set.csv",
+      "sha256": "fd7991a3353b9f90b2120b8d79fdf50ebaef6438c2e128be162ffbbf6d29c030"
+    },
+    "vgg": {
+      "path": "data/FLAG_2027/derived/official_v4/face.npy",
+      "sha256": "4f101205332502847ee25f08a1d8d90e86824fa1ead2d82d65171d2644e226ee"
+    },
+    "wavlm": {
+      "path": "outputs/v014/11-05-180917-58e6a4/features.npy",
+      "sha256": "c3700bb8d28cf484c341b377d0f0b001289ce37d4cd25e96fd5e2555d11fe34f"
+    }
+  },
+  "reference_sources": {
+    "standard": "outputs/v036/11-06-044627-808542",
+    "same_gender": "outputs/v022/11-05-185754-b20741"
+  },
+  "numerical_floor": 1e-08,
+  "inner_validation_speakers": 14,
+  "inner_pairs_per_class": 2000,
+  "independence_rows": 8,
+  "roundtrip_tolerance": 1e-10,
+  "promotion": {
+    "minimum_mean_improvement": 0.005,
+    "maximum_per_protocol_regression": 0.0,
+    "minimum_nonworse_folds": 4
+  },
+  "wandb": {
+    "mode": "offline",
+    "project": "FLAG-合法独立匹配",
+    "job_type": "nested_age_consistency"
+  },
+  "plot_font": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+  "plot_dpi": 140,
+  "selection_policy": "复用既有42身份训练头的14身份内层预测选择固定年龄项权重；年龄映射仅42身份拟合；外层使用56训练身份年龄映射及原v036/v022匹配头",
+  "test_data_policy": "开发、拟合和选参只读官方训练输入；最终推断仅读取当前trial媒体和已固定v372独立距离，不读取测试标签、成绩或跨trial统计",
+  "device": "cuda:0",
+  "gpu_memory_limit_gib": 4.0,
+  "allow_tf32": false,
+  "head_batch_size": 512,
+  "compatibility_tolerance": 1e-06,
+  "network": {
+    "face_dimension": 4096,
+    "voice_dimension": 512,
+    "fixed_embedding_dimension": 128,
+    "dropout": 0.5,
+    "batchnorm_momentum": 0.1,
+    "batchnorm_epsilon": 1e-05,
+    "normalization_epsilon": 1e-12,
+    "classification_scale": 1.0,
+    "classification_weight": 1.0,
+    "orthogonality_weight": 1.0,
+    "orthogonality_negative_weight": 0.7,
+    "multi_positive_weight": 0.1,
+    "multi_positive_temperature": 0.07,
+    "fusion_initial_weight": 0.5,
+    "initialization_gain": 1.0,
+    "initialization_bias": 0.01,
+    "speakers_per_batch": 16,
+    "samples_per_speaker": 8,
+    "steps_per_epoch": 100,
+    "epochs": 50,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "early_stop_patience": 8,
+    "projection_activation": "relu"
+  },
+  "final_inference_policy": "通过原晋级门槛后，在v372逐trial独立距离上加五折固定年龄惩罚的等权均值；每折年龄映射来自56训练身份，两个协议的权重仅内层选定；两语言同一规则，不使用性别输出",
+  "resource": {
+    "repo": "audeering/wav2vec2-large-robust-6-ft-age-gender",
+    "revision": "a681b720dafd12b9dd7b6d13fb437c7b6b197fd3",
+    "directory": "data/pretrained/attributes/audeering_6/a681b720dafd12b9dd7b6d13fb437c7b6b197fd3",
+    "weights": "model.safetensors",
+    "weights_sha256": "4a0f33264b690efcdee7d6cb803404486f9f93fd58355bbb0e6aa6f40db1e2e8",
+    "weights_bytes": 363257080,
+    "license": "cc-by-nc-sa-4.0",
+    "small_files": [
+      "config.json",
+      "preprocessor_config.json",
+      "README.md",
+      "LICENSE"
+    ],
+    "download_timeout_seconds": 30,
+    "download_budget_seconds": 300,
+    "chunk_bytes": 1048576
+  },
+  "face_resource": {
+    "path": "data/pretrained/identitynet/arcface/antelopev2-v0.7/genderage_extracted/genderage.onnx",
+    "sha256": "4fde69b1c810857b88c64a335084f1c3fe8f01246c9a191b48c7bb756d6652fb",
+    "alignment_log": "outputs/v017/11-05-182841-826bdc/alignments.jsonl",
+    "alignment_sha256": "679beb144501154f11971c4d195af5a23074a8ca27b8eea8f1b345b12dde5d56",
+    "bounding_box_margin": 1.5,
+    "age_scale": 100.0,
+    "inter_threads": 1,
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "log_severity": 3
+  },
+  "data": {
+    "training_root": "data/FLAG_2027/train_set/train_set",
+    "manifest": "outputs/v068/11-07-033102-f03e3c/manifest.json",
+    "manifest_sha256": "370a378448465f7d04be795f1e0b3c0b54f55c9846bf5977b0539aa3df7e3880",
+    "rows": 6485,
+    "sample_rate": 16000,
+    "max_audio_seconds": 6.0,
+    "minimum_audio_samples": 400,
+    "normalization_epsilon": 1e-07,
+    "autocast": "bfloat16",
+    "profile_rows": 16,
+    "smoke_rows": 2,
+    "log_every_rows": 256
+  },
+  "age_weights": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    16.0,
+    32.0
+  ],
+  "age_mapping": {
+    "ridge": 0.0001,
+    "age_units": 100.0
+  },
+  "inner_reference": "outputs/v374/11-11-170930-full-d08ff3",
+  "frozen_attributes_policy": "公开年龄/性别预测器完全冻结；只用年龄输出构建年龄一致性项，不用Evaluation结果或任何测试统计",
+  "resource_change_reason": "24层公开模型下载速度不足，尚未运行属性预测或查看验证成绩，切换同作者6层固定公开版本以降低下载与推断成本",
+  "inner_reference_sha256": {
+    "config.json": "025accc891d4ef7be308818f2f66dae82e516db6ceecea97ec28df36a5c629ea",
+    "fold_0/split.json": "8266fc575736be58f8c78b906223ab0e79d33bebb69ed7006f43932f16db0a6f",
+    "fold_0/inner_pairs.npz": "6c2ef70dc210018e20025d1db05133d850e5d530b0b38be724aaaff840294433",
+    "fold_0/inner_best.pt": "6685051950db96e7c8c7a500e532c787ff9bd5786d9b07297b1296d1986c44cc",
+    "fold_1/split.json": "4e7532647a46ad49a19185186a7abb63445194678d9d757434b96160e0559b6d",
+    "fold_1/inner_pairs.npz": "30bbac94f1e14e8c0c310e81db195288829139e73c7caecfa772388924fdc101",
+    "fold_1/inner_best.pt": "c37d285bf311a422cde5f9f09fc53613248b85973d0d15704200d58952adc0d5",
+    "fold_2/split.json": "37cf803b28ce97de0845722587f7919e5968bd6b3c00cd8d7d7f097e45ae83d0",
+    "fold_2/inner_pairs.npz": "e4be52d0dfa4d1f047893c652e960e793c10d3c9d502f8ca115a1bd25c45e9be",
+    "fold_2/inner_best.pt": "88aafad9a583083a19cb8e1592f5ebf2b0b8139305edaa60aa8594ce2c0cd8de",
+    "fold_3/split.json": "6774732ef08dce0a4fa9c00845a31d61063fb76799e1c5369e03f3069067cb9f",
+    "fold_3/inner_pairs.npz": "b0a8af6a6b66053e173892b741d33d4c33b93ccd7aa88638afac26996ca91bea",
+    "fold_3/inner_best.pt": "f6c321b6eab8a0cb9322be9dba075414fc0faac1840b1704b94078a4d7a602f1",
+    "fold_4/split.json": "bf77a670d0c184df2746377a1580fbd11710150ae336d4f67c8bb3ed1ea1d43e",
+    "fold_4/inner_pairs.npz": "287530640c86e0b63fcab20432503c5caa497ed6898a7c0e3c8755f3bc53d092",
+    "fold_4/inner_best.pt": "fce264189fbf17966ef20e9f060d10d7e79946e2e89b8b51892644535b39b630"
+  },
+  "trait_feature_run": "outputs/v377/11-11-174859-full-87a488",
+  "submission": {
+    "manifest": "data/FLAG_2027/derived/evaluation_phase/manifest.json",
+    "protocol_root": "data/FLAG_2027/evaluation_phase",
+    "cells": [
+      [
+        "no_gender",
+        "English",
+        "heard",
+        392
+      ],
+      [
+        "no_gender",
+        "Bangla",
+        "unheard",
+        802
+      ],
+      [
+        "gender",
+        "English",
+        "heard",
+        416
+      ],
+      [
+        "gender",
+        "Bangla",
+        "unheard",
+        716
+      ]
+    ],
+    "delivery_directory": "evaluation",
+    "score_decimals": 10,
+    "smoke_pairs_per_cell": 2,
+    "baseline_zip": "evaluation/submission_evaluation_v372.zip",
+    "baseline_sha256": "219e81f4d790f12c7964d56cce8cc0abf6faa7ad15230427bbe1450191bdb479",
+    "baseline_result": "outputs/v372/11-11-161958-full-6636f6/result.json",
+    "age_validation_run": "outputs/v377/11-11-175041-full-9ece48",
+    "manifest_sha256": "78c213c8f0c68fb8dc27cc4cb5fad7991f0e8b2413f8fe9826c18323b12b9e2a",
+    "maximum_seconds": 480,
+    "age_files_sha256": {
+      "result.json": "d151fcd9a728617078234479ef37162efbc16c4f7b55c9c65cb1e6f81e5fedf3",
+      "config.json": "f6f84085dd136b3b83ab0bd5e4e77f1a6bc33c29983962d048a0b29f4648611f",
+      "fold_0/age_model.json": "1baa0694ba097110b20d93ffc59fa9e46a05e5b14292c97381ed58d614221fcc",
+      "fold_1/age_model.json": "cd1420002f4bfa332127c98933547d2ba62243f928515ad05270a4aa385bf565",
+      "fold_2/age_model.json": "066421840d45c157bc8147e854bf305e113e934e3ed060df9810f3b2510ad02e",
+      "fold_3/age_model.json": "53e9f721a6f728754ccce253709624272d5777b811c553077dc1ba01d718780d",
+      "fold_4/age_model.json": "1866c8bd0de93fb610275373714e54dfd7b701460d2ac349dbbe24b60e5ba857"
+    }
+  },
+  "detector": {
+    "path": "data/pretrained/identitynet/arcface/antelopev2-v0.7/scrfd_10g_bnkps.onnx",
+    "sha256": "5838f7fe053675b1c7a08b633df49e7af5495cee0493c7dcf6697200b85b5b91",
+    "input_size": [
+      320,
+      320
+    ],
+    "threshold": 0.35,
+    "nms_threshold": 0.4,
+    "center_penalty": 2.0
+  }
+}

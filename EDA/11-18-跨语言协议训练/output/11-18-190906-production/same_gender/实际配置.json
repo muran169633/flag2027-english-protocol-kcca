@@ -1,0 +1,261 @@
+{
+  "experiment": {
+    "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+    "reference_config": "exps/v480/config.json",
+    "protocol_config": "exps/v494/config.json",
+    "english_pools": "EDA/11-18-跨录制协方差迁移/output/仅英语训练池.npz",
+    "baseline_heads": "EDA/11-18-英语训练池从头对照/output/续训FLAG仅官方行",
+    "whisper_dir": "~/.cache/huggingface/hub/models--openai--whisper-small/snapshots/973afd24965f72e36ca33b3055d56a652f456b4d",
+    "whisper_language_tokens": "EDA/11-18-孟加拉语验证源/output/Whisper语言编号.json",
+    "ecapa_dir": "data/pretrained/voxlingua107/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9",
+    "language_batch": 16,
+    "audio_rate": 16000,
+    "min_seconds": 3.0,
+    "max_seconds": 30.0,
+    "min_whisper_en": 0.95,
+    "min_ecapa_en": 0.95,
+    "minimum_videos": 4,
+    "check_languages": [
+      "English",
+      "Hindi",
+      "Urdu",
+      "German"
+    ],
+    "check_per_language": 32,
+    "check_seed": 20261118,
+    "pretrain": {
+      "steps": 750,
+      "identities": 64,
+      "learning_rate": 0.001,
+      "class_seed": 8500,
+      "media_seed": 9600
+    },
+    "adapt": {
+      "steps": 200,
+      "identities": 32,
+      "learning_rate": 0.0001,
+      "class_seed": 48500,
+      "media_seed": 49600
+    },
+    "torch_seed": 7500,
+    "replicate_stride": 10000,
+    "weight_decay": 0.001,
+    "initial_scale": 20,
+    "initial_center": 0.3,
+    "per_identity": 4,
+    "resource_cpu_threads": 2,
+    "resource_gpu_fraction": 0.2
+  },
+  "matcher": {
+    "metadata": {
+      "face": [
+        "outputs/v379/features/train_faces.json",
+        "outputs/v380/features/vox2t_faces.json"
+      ],
+      "voice": [
+        "outputs/v379/features/train_voices.json",
+        "outputs/v380/features/vox2t_voices.json"
+      ]
+    },
+    "feature_blocks": {
+      "face": [
+        [
+          "outputs/v381/features/train_faces_generic.npz",
+          "clip"
+        ],
+        [
+          "outputs/v381/features/vox2t_faces_generic.npz",
+          "clip"
+        ]
+      ],
+      "voice_train": [
+        [
+          "outputs/v379/features/train_voices_wavlm.npz",
+          "wavlm"
+        ],
+        [
+          "outputs/v379/features/train_voices.npz",
+          "ecapa"
+        ],
+        [
+          "outputs/v379/features/train_voices.npz",
+          "eres"
+        ],
+        [
+          "outputs/v379/features/train_voices.npz",
+          "resnet"
+        ],
+        [
+          "outputs/v383/features/train_voices_generic.npz",
+          "whisper"
+        ],
+        [
+          "outputs/v383/features/train_voices_generic.npz",
+          "age6"
+        ]
+      ],
+      "voice_extra": [
+        [
+          "outputs/v380/features/vox2t_voices.npz",
+          "wavlm"
+        ],
+        [
+          "outputs/v380/features/vox2t_voices.npz",
+          "ecapa"
+        ],
+        [
+          "outputs/v380/features/vox2t_voices.npz",
+          "eres"
+        ],
+        [
+          "outputs/v380/features/vox2t_voices.npz",
+          "resnet"
+        ],
+        [
+          "outputs/v383/features/vox2t_voices_generic.npz",
+          "whisper"
+        ],
+        [
+          "outputs/v383/features/vox2t_voices_generic.npz",
+          "age6"
+        ]
+      ],
+      "face_additional": [
+        [
+          "outputs/v382/features/train_faces_large.npz",
+          "clipL"
+        ],
+        [
+          "outputs/v382/features/vox2t_faces_large.npz",
+          "clipL"
+        ]
+      ]
+    },
+    "canonical_alias": {
+      "v2_id0073": "v4_id039"
+    },
+    "device": "cuda:0",
+    "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "protocols": [
+      "standard",
+      "same_gender"
+    ],
+    "experiment_id": "v480",
+    "parent_run": "outputs/research/11-14-v382-dinov3-bce-extension/20261114T151902Z-full",
+    "output_root": "outputs",
+    "cpu_threads": 2,
+    "gpu_fraction": 0.2,
+    "batch_size": 2048,
+    "bn_epsilon": 1e-05,
+    "jitter_relative": 1e-10,
+    "official_rows": 6485,
+    "expected_fit_ids": 377,
+    "replay_tolerance": 1e-05,
+    "max_seconds": 900,
+    "wandb_project": "flag-face-voice",
+    "plot_dpi": 140,
+    "weight_decay": 0.001,
+    "per_id": 4,
+    "model_dim": 128,
+    "dropout": 0.5,
+    "scale_bounds": [
+      1,
+      100
+    ],
+    "smoke_steps": 2,
+    "log_interval": 20,
+    "checkpoint_tolerance": 1e-06,
+    "plot_font": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+    "face_base_dim": 512,
+    "research_only": true,
+    "uses_evaluation_information": false,
+    "formal_submission_allowed": false,
+    "auxiliary_weight": 0.5,
+    "auxiliary_batch_size": 128,
+    "student_steps": 200,
+    "student_learning_rate": 0.0001,
+    "control_replay_tolerance": 1e-07,
+    "positive_fraction": 0.5,
+    "forbidden_input_tokens": [
+      "/evaluation_phase/",
+      "/eval_",
+      "/v353/",
+      "/仅研究_不合规/"
+    ],
+    "face_block_dimensions": [
+      512,
+      768
+    ],
+    "voice_block_dimensions": [
+      512,
+      192,
+      192,
+      256,
+      768,
+      1024
+    ],
+    "arms": [
+      "hard_labels",
+      "frozen_hardness",
+      "shuffled_hardness"
+    ],
+    "minimum_gain_pp": 0.5,
+    "minimum_improved_folds": 4,
+    "reference_run": "outputs/v469/11-17-143807-full-e8be0e",
+    "normalization_epsilon": 1e-12,
+    "hardness_floor": 0.5,
+    "shuffle_shift": 1
+  },
+  "study": {
+    "training_config": "EDA/11-18-Vox英语身份扩充/config.json",
+    "screened_vox": "EDA/11-18-Vox英语身份扩充/output/英语片段筛选.json",
+    "v1_trials": "outputs/v461/11-17-冻结协议/pairs.npz",
+    "v1_manifest": "outputs/v461/11-17-冻结协议/manifest.json",
+    "v1_gender": "data/MAV_Celeb_history/mavceleb_v1_complete/meta_v1.csv",
+    "v4_gender": "data/FLAG_2027/meta_file_train_set.csv",
+    "vox_gender": "data/external/voxceleb2_test/vox2_meta.csv",
+    "official_hash_manifest": "outputs/v068/11-07-033102-f03e3c/manifest.json",
+    "production_arms": [
+      "count_matched",
+      "same_gender",
+      "unique",
+      "size_matched"
+    ],
+    "withheld_sources": [
+      "v1",
+      "v2"
+    ],
+    "v2_repeats": 2,
+    "trial_seed": 20261119,
+    "auxiliary_weight": 0.5,
+    "arms": [
+      "original",
+      "vox_all",
+      "vox_cross",
+      "count_matched",
+      "same_gender"
+    ],
+    "smoke_steps": 2
+  },
+  "positive_mode": "cross_video",
+  "recipe": "same_gender",
+  "python": "/home/xxc/miniconda3/envs/my_project_env/bin/python",
+  "prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "argv": [
+    "EDA/11-18-跨语言协议训练/production.py"
+  ]
+}

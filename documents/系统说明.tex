@@ -1,0 +1,184 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{spconf,amsmath,url}
+\urlstyle{same}
+\title{Face--Voice Verification with Protocol-Specific Matching and Kernel Canonical Correlation}
+\name{FLAG 2027 local development system}
+\address{English training and five-fold identity-held-out evaluation}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We describe the English-trained system retained after local FLAG development.
+It scores a face and a voice with two neural matching ensembles and a
+regularized kernel canonical correlation model. The choice of negative
+examples during training differs between the standard and same-gender
+protocols. The kernel branch learns which training identities have similar
+representations in both modalities. Across 100,000 English development
+trials, the system achieved 16.604\% equal error rate (EER) on the standard
+protocol and 27.216\% on same-gender trials, averaging 21.910\%.
+The preceding cross-video ensemble averaged 22.524\% on the same trials.
+We report the local results and the archive fingerprint. An official
+English--Bangla four-condition EER is unavailable for this system.
+\end{abstract}
+\begin{keywords}
+face--voice verification, kernel canonical correlation analysis,
+speaker verification, equal error rate
+\end{keywords}
+
+\section{Inputs and training identities}
+The FLAG task asks whether a face and a voice belong to the same person.
+In the standard protocol, a negative pair can contain any two different
+people. In the same-gender protocol, the two people in a negative pair
+share a gender. The scorer receives the protocol name and one face--voice
+pair~\cite{flag}.
+
+The face input joins frozen CLIP ViT-B/16 and ViT-L/14 image embeddings
+into 1,280 components~\cite{clip}. The 2,944-component voice input joins
+WavLM, ECAPA-TDNN, ERes2NetV2, WeSpeaker ResNet293-LM, Whisper-small
+and a pooled wav2vec 2.0 representation from audEERING's age/gender model.
+We use the embedding of the latter model. At inference we do not require
+a person's age or gender.
+
+The training pools use English recordings from MAV-Celeb and a screened
+subset of VoxCeleb2. For VoxCeleb2 we retained clips of 3--30 seconds
+when Whisper-small and VoxLingua107 ECAPA both assigned English a
+probability of at least 0.95. This added 1,804 recordings from 88 people.
+The language assignments for these clips come from the two frozen
+recognizers. The kernel branch used 344--346 training identities per
+development fold after removing known aliases. Each of the five outer
+folds held out 14 official training identities for evaluation.
+
+\section{Neural matching}
+Each network learns a separate 128-dimensional projection for face
+and voice. During scoring each projection applies a linear map, frozen
+batch normalization, ReLU and unit-length normalization. A Gaussian
+model scores the concatenated embeddings under the same-identity and
+different-identity hypotheses. The deployment files store the mean and
+quadratic-form parameters needed to compute their log-likelihood ratio.
+
+For each protocol, we average two sets of neural scores. One set comes
+from the previous English model. Its standard-protocol parameters
+exclude the contribution of ERes2NetV2. The other set comes from a
+network trained for that protocol. Each set contains three seeds across
+five training folds. The local development evaluation uses only the
+models belonging to the corresponding held-out fold.
+
+The two protocol-specific networks use the same identity-matching loss.
+Within each recording source, the same-gender model pairs each face
+identity with other people of the same gender to form negatives. The
+standard model draws the same number of negative identities at random
+from that source for each face identity. For each protocol we average
+the binary cross-entropies on matched pairs and the selected negatives.
+This loss and the identity-matching loss each carry weight 0.5. People
+with unknown gender still contribute to the identity-matching loss.
+Each run uses 750 updates on the English source pool and 200 adaptation
+updates on the official training identities.
+
+\section{Cross-modal kernel model}
+We unit-normalize each frontend's feature block and give the blocks
+equal weight within a modality. For each training identity we remove
+repeated file paths and compute separate face and voice centers, giving
+each recording equal total weight. Thus a video that supplies many
+frames cannot dominate an identity's face center.
+
+For each modality we build a radial basis function kernel using the
+training identity centers. The bandwidth is the median squared distance
+between distinct identity centers in that modality. We center the
+kernel matrix, regularize its eigenspectrum with \(0.01\) times the
+matrix trace, and use singular value decomposition to align the face
+and voice representations. We retain up to 32 canonical directions
+and weight each by the square root of its canonical correlation~\cite{kcca}.
+
+At inference each face or voice is compared with the frozen training
+centers and projected into its respective canonical space. The raw
+match score is the dot product of the two unit projections. Within each
+outer fold we hold out four groups of training identities in turn to
+generate scores for logistic calibration. The standard and same-gender
+protocols have separate calibration slopes and intercepts. None of these
+quantities needs to be fitted on an Evaluation trial.
+
+\section{Scoring a single pair}
+Let \(g_0\) and \(g_p\) be the distances from the fixed neural ensemble
+and the neural ensemble specialized for protocol \(p\). Let \(k_{fp}\)
+be the calibrated kernel log odds from fold \(f\). For the local
+deployment archive the fused distance and exported score are
+\begin{equation}
+ d_p=\frac{g_0+g_p}{2}-\frac{1}{5}\sum_{f=1}^{5} k_{fp},
+ \qquad s_p=\frac12+\frac{\arctan(d_p)}{\pi}.
+\end{equation}
+Smaller scores indicate stronger evidence of a match. Both languages
+use the same frozen parameters for a given protocol. The Evaluation
+manifest determines the trial order and the destination score file.
+
+\section{Development results}
+\begin{table}[!ht]
+\centering
+\caption{English development EER (\%). Each of five folds contributes
+10,000 trials to each protocol, with 5,000 same-identity pairs.}
+\label{tab:local}
+\smallskip\small\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrr@{}}
+\hline
+Method & Standard & Same-gender & Mean\\ \hline
+Cross-video ensemble &16.908&28.140&22.524\\
+Protocol-specific models &16.548&27.348&21.948\\
+With radial basis kernel &16.604&27.216&\textbf{21.910}\\ \hline
+\end{tabular}
+\end{table}
+The protocol-specific training accounts for 0.576 percentage points
+of the 0.614-point mean reduction in Table~\ref{tab:local}. Adding the
+kernel changes the mean by a further 0.038 points. A paired bootstrap
+over people gives a 95\% interval of \([-1.362,+0.048]\) points for
+the full system minus the cross-video ensemble. The kernel configuration
+was fixed before reading these results. A linear-kernel comparison
+averaged 21.894\%. An earlier system trained with additional languages
+averaged 21.790\% on the English trials. We retained the prespecified
+radial basis model for the English-trained candidate.
+
+\begin{table}[!ht]
+\centering
+\caption{EER (\%) on other recordings. Each row compares the same
+trials across systems. The two Bangla rows each include seven people.}
+\label{tab:transfer}
+\smallskip\small\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrr@{}}
+\hline
+Corpus and protocol & Cross-video & With kernel\\ \hline
+English--Urdu, four conditions &31.038&29.967\\
+English--Hindi, standard mean &25.349&25.196\\
+Vox Bangla, same gender &22.222&27.778\\
+Bangla authors, same gender &46.825&39.683\\ \hline
+\end{tabular}
+\end{table}
+For the bilingual comparisons in Table~\ref{tab:transfer} we refitted
+the systems with the corresponding source collections excluded. The
+authors' portraits were collected independently of their recordings. The
+two Bangla checks moved in opposite directions. Some English and Vox
+Bangla development results informed the protocol choices, so they are
+reported as development evidence.
+
+\section{Reproducibility}
+In the local development repository, \path{reproduce.py} recalculates the
+five-fold EERs from saved trial scores and rebuilds the research ZIP
+from frozen features. The archived training and scoring entries are
+\path{anchor_train.py} and \path{anchor_package.py}. The matcher loads
+four neural parameter files and five radial basis models. Replay on 288 trials sampled across
+12 local conditions reproduced the stored distances to within
+\(2.85\times10^{-14}\). Two packaging runs produced identical archive
+bytes for all 2,326 Evaluation trials. The local archive's SHA-256 is
+\begin{center}\small\ttfamily
+faf1c779c4a86b3dbe5b1a9c09ac5a5c\\
+35f3e348c9ffc0f5526afbf5bfcd2ec3
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{flag} FLAG 2027 Organizing Team, \emph{FLAG 2027 Challenge},
+\url{https://mavceleb.github.io/dataset/competition.html}.
+\bibitem{clip} A. Radford et al., \emph{Learning Transferable Visual Models
+From Natural Language Supervision}, Proc. ICML, 2021, pp.~8748--8763.
+\bibitem{kcca} D. R. Hardoon, S. Szedmak and J. Shawe-Taylor,
+\emph{Canonical Correlation Analysis: An Overview with Application to
+Learning Methods}, Neural Computation, vol.~16, 2004, pp.~2639--2664.
+\end{thebibliography}
+\end{document}

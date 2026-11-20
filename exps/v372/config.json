@@ -1,0 +1,187 @@
+{
+  "experiment_id": "v372",
+  "training_python": "/home/xxc/miniconda3/envs/my_project_env/bin/python",
+  "output_directory": "outputs",
+  "delivery_directory": "evaluation",
+  "device": "cuda:0",
+  "cpu_threads": 4,
+  "gpu_memory_limit_gib": 4.0,
+  "compute_budget_seconds": 600,
+  "mode": "full",
+  "allow_tf32": false,
+  "manifest": "data/FLAG_2027/derived/evaluation_phase/manifest.json",
+  "protocol_root": "data/FLAG_2027/evaluation_phase",
+  "cells": [
+    [
+      "no_gender",
+      "English",
+      "heard",
+      392
+    ],
+    [
+      "no_gender",
+      "Bangla",
+      "unheard",
+      802
+    ],
+    [
+      "gender",
+      "English",
+      "heard",
+      416
+    ],
+    [
+      "gender",
+      "Bangla",
+      "unheard",
+      716
+    ]
+  ],
+  "sources": {
+    "no_gender": {
+      "run": "outputs/v036/11-06-044627-808542",
+      "validation_metric": "standard"
+    },
+    "gender": {
+      "run": "outputs/v022/11-05-185754-b20741",
+      "validation_metric": "same_gender"
+    }
+  },
+  "selection_candidates": [
+    {
+      "run": "outputs/v012/11-05-170654-b7f735",
+      "result_sha256": "a059f4f10247e838243ea88e94490b5841856932c45a8ee81db2e0902d7e895b",
+      "config_sha256": "e1fff91169c30cf6fb203ce39bc344601ccccb6513ab9652c227d1d78e3f7917"
+    },
+    {
+      "run": "outputs/v013/11-05-170857-cd9a84",
+      "result_sha256": "adea27bb0b8a4601dd6100388c08349826b48303fb1922b3b7dad0ffc5700d16",
+      "config_sha256": "ff7886b1157829213bb17e89f08f6c3d681dac383fa5ff1ee23e47e4404db73c"
+    },
+    {
+      "run": "outputs/v015/11-05-174629-dd590c",
+      "result_sha256": "a4f56fe1cf61be8c7eed5ffc1ba30e2d8f20bda2a049781e92031cf8abbdf69c",
+      "config_sha256": "3274598ee9a48db86754825fc15bd30657f2664acd947e98c10a97f5cd9c7f91"
+    },
+    {
+      "run": "outputs/v016/11-05-181402-33b610",
+      "result_sha256": "ada200c6bca1ae43c829bb9256e801d44a063d6f5eb48fb4e4cf4739adb340ea",
+      "config_sha256": "bdf7b98a1c9e38e5f68ed99bae7d9597f0c4b0c8d7aa395e9f4c14f311647ac9"
+    },
+    {
+      "run": "outputs/v018/11-05-183318-43854f",
+      "result_sha256": "f2bd77f00b3499d7d62951453d22c1e2177e7e2df5d9004d8f84cb6cc7b1a417",
+      "config_sha256": "7bf3b19985ff656da6e8925fde6377e2a4e16eaac9d24abb625fb60c9694d6f0"
+    },
+    {
+      "run": "outputs/v019/11-05-183631-d7f6c2",
+      "result_sha256": "a55e058f98c5ac5cd5e65d9b18ee6a3a5e78dd2dc335048f7698387c656c89df",
+      "config_sha256": "5ead7ccc1359671d5c294cb832d9955cdd91058c1887b17689f36ce0d8d6e08a"
+    },
+    {
+      "run": "outputs/v020/11-05-184958-7cf645",
+      "result_sha256": "ab2d5b5e397497b6bfc0b89c97fd8f0760ade7095d91424879ee6d4b5c62a247",
+      "config_sha256": "f703a9519a0dcc106fd087b28f92a20567bac3d5b738b6aa9a34fb79210f464f"
+    },
+    {
+      "run": "outputs/v021/11-05-185217-81dc1c",
+      "result_sha256": "7904b38322d624afd87ace0c25a07d27d19d78baecd609d575131444ec3914aa",
+      "config_sha256": "b4c9e5795bbb3d27d4fb6ec685befa74eee5e0b8b1f817067997a03c03e188bd"
+    },
+    {
+      "run": "outputs/v022/11-05-185754-b20741",
+      "result_sha256": "3ce13bec3e588d1414579aaebdc5685b424be51c2314c66c8bcca287bde595c3",
+      "config_sha256": "e5d29fcb813b0dfa35e378f22b7cacd0f5eec0970eb382495354cf096e0f351f"
+    },
+    {
+      "run": "outputs/v025/11-05-193101-c87226",
+      "result_sha256": "23b2a6603857d0e05382e34db8970ff688e57508a0c082f3cdf2545206e9cfb8",
+      "config_sha256": "c0ee4efb25703d6e0902e93b83eaabbf91326fe8ff5454f074c06fac6c247f45"
+    },
+    {
+      "run": "outputs/v028/11-06-043405-b0e730",
+      "result_sha256": "aff3419fd2ac8a344316a16a0b9aa3936d3c884542f05f49cb243b23ae759a4b",
+      "config_sha256": "40872ed474b2f8464f720614f207ea7b35778cb145b85b6f2c256ff156314ce8"
+    },
+    {
+      "run": "outputs/v029/11-06-043527-64667e",
+      "result_sha256": "77fef3ccf34b6d48df6802d3523d160bf142516ce70cff858d8e4695ef7199da",
+      "config_sha256": "265cc4a586c30d66061c30a63ae33aeb044d421214c52d75d370b1d73b1ae931"
+    },
+    {
+      "run": "outputs/v030/11-06-043628-90a376",
+      "result_sha256": "713b9dda413ec3b9a703294a7970bf9b1e0e8159c332fdd32c4f81f35836257f",
+      "config_sha256": "b2ffe83dd27bbd1f08a4c16e5b967f9bc555b2220300745922b2798f159beda9"
+    },
+    {
+      "run": "outputs/v031/11-06-043710-2b1070",
+      "result_sha256": "efd858f657a3e45cc8de135f851c02afab0dca9864e6ba0e3ae5114b7d7505b5",
+      "config_sha256": "712ee48624457e2f5115eb76bb633ab07e477092b7a9dc0336609fae0f6af68f"
+    },
+    {
+      "run": "outputs/v032/11-06-043820-089f06",
+      "result_sha256": "829e6fe3a53033b6c7c818315458a2aed2457c9e253da81036f2c9bc2dde524b",
+      "config_sha256": "6f8d9e00e1cb4cf4d3d40616419ca2785a6c762e2d49c877726cb40b878947a8"
+    },
+    {
+      "run": "outputs/v033/11-06-043921-4aa075",
+      "result_sha256": "634084918dd57a90121cb31d549bdc1895d791d65111fd01fecb534731e4277b",
+      "config_sha256": "717def49a5280093f58f9c6f77d37e5d9116d94b581d55826ed74bda158d4aba"
+    },
+    {
+      "run": "outputs/v034/11-06-044022-ebb846",
+      "result_sha256": "c60f6ebe84d82f5ecb27b93f844edf449a5688a4ab4975e3ffaf4c5e08d0792a",
+      "config_sha256": "9006356d4d4bce95e51bc9d4d1d3b1037b1f8d6d14f44a871274c76d15b81f3b"
+    },
+    {
+      "run": "outputs/v035/11-06-044118-91bdd7",
+      "result_sha256": "2017d4a328b0115f1628cfc7ee26dada990f5785f39e94eefb7d6572564a67b4",
+      "config_sha256": "7c9ed085308a637f37f4dad5e7ca06ecaa9d9b624640f8f51f0c2545cd576dbe"
+    },
+    {
+      "run": "outputs/v036/11-06-044627-808542",
+      "result_sha256": "7210672f4d692f77d135231bcae49a8af86a46ec48ad30e35aaffd5e4d8ca855",
+      "config_sha256": "f58180430af4965d204578a2af13f5004380a6531ad013f8a1a093003df010c8"
+    },
+    {
+      "run": "outputs/v037/11-06-045620-2c148d",
+      "result_sha256": "1980e1cdf1df178d21fb0738d77b56313871cd0ed443fe753bb52d2c7c130f22",
+      "config_sha256": "202096d662e5bd22ff89cb90bb01bb5ddc0e38886cca27a4688d29a96ca97632"
+    },
+    {
+      "run": "outputs/v038/11-06-045653-a8e7fb",
+      "result_sha256": "6887b06e3b59c8f39151b7a452637a58539c9dd40f36679f6d9d9b983df20908",
+      "config_sha256": "d2567b82ce2308f9bc9b6b3dcb5e0df076514fb89c5391594f202ed6509eca35"
+    },
+    {
+      "run": "outputs/v039/11-06-050108-b26a85",
+      "result_sha256": "86d4d87c44c4bf58da25525080a812dc2929ba00a4243462427dfcbec5977b4e",
+      "config_sha256": "f1983227e833ab4878f779c142d26dd70327d5709ad567a261cb233cf2ffc1de"
+    }
+  ],
+  "head_batch_size": 512,
+  "compatibility_pairs_per_fold": 16,
+  "score_tolerance": 1e-06,
+  "voice_encoder": {
+    "repository": "microsoft/wavlm-base-plus-sv",
+    "revision": "feb593a6c23c1cc3d9510425c29b0a14d2b07b1e",
+    "local_directory": "data/pretrained/identitynet/wavlm/feb593a6c23c1cc3d9510425c29b0a14d2b07b1e",
+    "sample_rate": 16000,
+    "maximum_seconds": 6.0,
+    "minimum_samples": 400,
+    "precision": "bfloat16",
+    "batch_size": 1,
+    "dimension": 512,
+    "normalization_epsilon": 1e-12,
+    "log_every_rows": 100,
+    "training_compatibility_samples": 4,
+    "training_compatibility_max_abs": 0.003
+  },
+  "smoke_pairs_per_cell": 2,
+  "verification_rows": 4,
+  "independence_test_atol": 1e-06,
+  "score_decimals": 10,
+  "score_formula": "1 - plain_mean(five frozen model cosine similarities)",
+  "selection_policy": "仅比较既有官方v4训练身份五折结果；逐协议取原始折均值最小者，等权五模型；不读取Progress/Evaluation分数",
+  "wandb_mode": "disabled"
+}

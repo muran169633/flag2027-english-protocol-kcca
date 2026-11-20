@@ -1,0 +1,195 @@
+{
+  "experiment_id": "v088",
+  "output_root": "outputs",
+  "default_mode": "smoke",
+  "model": "WeSpeaker ResNet293-LM",
+  "weights_root": "data/pretrained/wespeaker/resnet293_lm/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83",
+  "reference_root": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c",
+  "repository_commit": "9fecd6cb4f47475d01761d87c826298dff4ef18c",
+  "model_revision": "6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83",
+  "downloads": [
+    {
+      "url": "https://huggingface.co/Wespeaker/wespeaker-voxceleb-resnet293-LM/resolve/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/avg_model.pt",
+      "path": "data/pretrained/wespeaker/resnet293_lm/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/avg_model.pt",
+      "bytes": 133998630,
+      "sha256": "e7b8447ea84345e26432461b4dda224d1af34a3985a438268e0dfbbde059b1ce"
+    },
+    {
+      "url": "https://huggingface.co/Wespeaker/wespeaker-voxceleb-resnet293-LM/resolve/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/voxceleb_resnet293_LM.onnx",
+      "path": "data/pretrained/wespeaker/resnet293_lm/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/voxceleb_resnet293_LM.onnx",
+      "bytes": 114336285,
+      "sha256": "dbb1ccc7754caff552ebc46347a51aaee2669bb24efc740e665d1a1133d20e98"
+    },
+    {
+      "url": "https://huggingface.co/Wespeaker/wespeaker-voxceleb-resnet293-LM/resolve/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/config.yaml",
+      "path": "data/pretrained/wespeaker/resnet293_lm/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/config.yaml",
+      "bytes": 1538,
+      "sha256": null
+    },
+    {
+      "url": "https://huggingface.co/Wespeaker/wespeaker-voxceleb-resnet293-LM/resolve/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/README.md",
+      "path": "data/pretrained/wespeaker/resnet293_lm/6e6bffe5bf3d772a1f143dc6dbfea58a0799ea83/README.md",
+      "bytes": 2893,
+      "sha256": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wenet-e2e/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/models/resnet.py",
+      "path": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/models/resnet.py",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wenet-e2e/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/models/pooling_layers.py",
+      "path": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/models/pooling_layers.py",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wenet-e2e/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/bin/infer_onnx.py",
+      "path": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/wespeaker/bin/infer_onnx.py",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wenet-e2e/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/LICENSE",
+      "path": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/LICENSE",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wenet-e2e/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/docs/pretrained.md",
+      "path": "refs/wespeaker/9fecd6cb4f47475d01761d87c826298dff4ef18c/docs/pretrained.md",
+      "bytes": null,
+      "sha256": null
+    }
+  ],
+  "http_workers": 2,
+  "http_attempts": 3,
+  "http_timeout_seconds": 30,
+  "retry_backoff_seconds": 2,
+  "download_chunk_bytes": 1048576,
+  "max_download_bytes": 300000000,
+  "download_time_limit_seconds": 1200,
+  "cpu_threads": 2,
+  "gpu_memory_fraction": 0.2,
+  "device": "cuda:0",
+  "allow_tf32": false,
+  "sample_rate": 16000,
+  "max_audio_seconds": 6.0,
+  "minimum_audio_samples": 400,
+  "mel_bins": 80,
+  "frame_length_ms": 25.0,
+  "frame_shift_ms": 10.0,
+  "fbank_dither": 0.0,
+  "window_type": "hamming",
+  "use_energy": false,
+  "pcm_scale": 32768.0,
+  "embedding_size": 256,
+  "pooling": "TSTP",
+  "two_embedding_layers": false,
+  "reference_tolerance": 1e-05,
+  "seed": 8807,
+  "feature_log_interval": 64,
+  "time_limit_seconds": 1800,
+  "deadline": "2026-11-08T10:00:00+08:00",
+  "wandb_project": "FLAG-IdentityNet",
+  "wandb_mode": "offline",
+  "plot_font_file": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+  "plot_dpi": 140,
+  "compliance": "只用公开预训练模型，不下载身份标签、不关联测试人物；先独立前向及身份隔离声纹互补性验证，research_only",
+  "model_channels": 32,
+  "model_blocks": [
+    10,
+    20,
+    64,
+    3
+  ],
+  "stage_strides": [
+    1,
+    2,
+    2,
+    2
+  ],
+  "bottleneck_expansion": 4,
+  "pooling_variance_epsilon": 1e-07,
+  "pooling_variance_correction": 1,
+  "minimum_fbank_frames": 16,
+  "checkpoint_ignored_prefixes": [
+    "projection."
+  ],
+  "reference_frames": 130,
+  "smoke_voice_count": 2,
+  "onnx_input": "feats",
+  "onnx_output": "embs",
+  "onnx_inter_threads": 1,
+  "onnx_providers": [
+    "CPUExecutionProvider"
+  ],
+  "onnx_log_severity": 3,
+  "checkpoint_file": "avg_model.pt",
+  "onnx_file": "voxceleb_resnet293_LM.onnx",
+  "feature_resume_runs": [
+    "outputs/v088/11-07-121635-eea5a4"
+  ],
+  "actual_reference_checks": 2,
+  "sources": [
+    {
+      "name": "historical_crosslanguage",
+      "manifest": "outputs/v055/11-06-202706-28f41e/manifest.json",
+      "roles": []
+    },
+    {
+      "name": "official_train",
+      "manifest": "outputs/v068/11-07-033102-f03e3c/manifest.json",
+      "roles": []
+    },
+    {
+      "name": "crema_screening",
+      "manifest": "outputs/v077/11-07-054220-5bd77d/manifest.json",
+      "roles": [
+        "screening"
+      ]
+    },
+    {
+      "name": "crema_reserve",
+      "manifest": "outputs/v077/11-07-054220-5bd77d/manifest.json",
+      "roles": [
+        "reserve"
+      ]
+    },
+    {
+      "name": "crema_final_unseen",
+      "manifest": "outputs/v095/11-07-072619-d8dced/manifest.json",
+      "roles": [
+        "final_unseen"
+      ]
+    },
+    {
+      "name": "historical_expanded",
+      "manifest": "outputs/v108/11-07-082915-05deb5/manifest.json",
+      "roles": []
+    },
+    {
+      "name": "crema_last_unseen",
+      "manifest": "outputs/v106/11-07-083640-e0106a/manifest.json",
+      "roles": [
+        "last_unseen"
+      ]
+    },
+    {
+      "name": "ravdess_all",
+      "manifest": "outputs/v123/11-07-115350-c2b0c0/manifest.json",
+      "roles": []
+    },
+    {
+      "name": "flag_dev_unlabelled",
+      "manifest": "outputs/v066/11-07-025153-b764e7/manifest.json",
+      "roles": []
+    },
+    {
+      "name": "historical_low_resource",
+      "manifest": "outputs/v132/11-07-121742-0078e5/manifest.json",
+      "roles": []
+    }
+  ]
+}

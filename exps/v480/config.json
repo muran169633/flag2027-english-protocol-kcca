@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "face": [
+      "outputs/v379/features/train_faces.json",
+      "outputs/v380/features/vox2t_faces.json"
+    ],
+    "voice": [
+      "outputs/v379/features/train_voices.json",
+      "outputs/v380/features/vox2t_voices.json"
+    ]
+  },
+  "feature_blocks": {
+    "face": [
+      [
+        "outputs/v381/features/train_faces_generic.npz",
+        "clip"
+      ],
+      [
+        "outputs/v381/features/vox2t_faces_generic.npz",
+        "clip"
+      ]
+    ],
+    "voice_train": [
+      [
+        "outputs/v379/features/train_voices_wavlm.npz",
+        "wavlm"
+      ],
+      [
+        "outputs/v379/features/train_voices.npz",
+        "ecapa"
+      ],
+      [
+        "outputs/v379/features/train_voices.npz",
+        "eres"
+      ],
+      [
+        "outputs/v379/features/train_voices.npz",
+        "resnet"
+      ],
+      [
+        "outputs/v383/features/train_voices_generic.npz",
+        "whisper"
+      ],
+      [
+        "outputs/v383/features/train_voices_generic.npz",
+        "age6"
+      ]
+    ],
+    "voice_extra": [
+      [
+        "outputs/v380/features/vox2t_voices.npz",
+        "wavlm"
+      ],
+      [
+        "outputs/v380/features/vox2t_voices.npz",
+        "ecapa"
+      ],
+      [
+        "outputs/v380/features/vox2t_voices.npz",
+        "eres"
+      ],
+      [
+        "outputs/v380/features/vox2t_voices.npz",
+        "resnet"
+      ],
+      [
+        "outputs/v383/features/vox2t_voices_generic.npz",
+        "whisper"
+      ],
+      [
+        "outputs/v383/features/vox2t_voices_generic.npz",
+        "age6"
+      ]
+    ],
+    "face_additional": [
+      [
+        "outputs/v382/features/train_faces_large.npz",
+        "clipL"
+      ],
+      [
+        "outputs/v382/features/vox2t_faces_large.npz",
+        "clipL"
+      ]
+    ]
+  },
+  "canonical_alias": {
+    "v2_id0073": "v4_id039"
+  },
+  "device": "cuda:0",
+  "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "protocols": [
+    "standard",
+    "same_gender"
+  ],
+  "experiment_id": "v480",
+  "parent_run": "outputs/research/11-14-v382-dinov3-bce-extension/20261114T151902Z-full",
+  "output_root": "outputs",
+  "cpu_threads": 2,
+  "gpu_fraction": 0.2,
+  "batch_size": 2048,
+  "bn_epsilon": 1e-05,
+  "jitter_relative": 1e-10,
+  "official_rows": 6485,
+  "expected_fit_ids": 377,
+  "replay_tolerance": 1e-05,
+  "max_seconds": 900,
+  "wandb_project": "flag-face-voice",
+  "plot_dpi": 140,
+  "weight_decay": 0.001,
+  "per_id": 4,
+  "model_dim": 128,
+  "dropout": 0.5,
+  "scale_bounds": [
+    1,
+    100
+  ],
+  "smoke_steps": 2,
+  "log_interval": 20,
+  "checkpoint_tolerance": 1e-06,
+  "plot_font": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+  "face_base_dim": 512,
+  "research_only": true,
+  "uses_evaluation_information": false,
+  "formal_submission_allowed": false,
+  "auxiliary_weight": 0.5,
+  "auxiliary_batch_size": 128,
+  "student_steps": 200,
+  "student_learning_rate": 0.0001,
+  "control_replay_tolerance": 1e-07,
+  "positive_fraction": 0.5,
+  "forbidden_input_tokens": [
+    "/evaluation_phase/",
+    "/eval_",
+    "/v353/",
+    "/仅研究_不合规/"
+  ],
+  "face_block_dimensions": [
+    512,
+    768
+  ],
+  "voice_block_dimensions": [
+    512,
+    192,
+    192,
+    256,
+    768,
+    1024
+  ],
+  "arms": [
+    "hard_labels",
+    "frozen_hardness",
+    "shuffled_hardness"
+  ],
+  "minimum_gain_pp": 0.5,
+  "minimum_improved_folds": 4,
+  "reference_run": "outputs/v469/11-17-143807-full-e8be0e",
+  "normalization_epsilon": 1e-12,
+  "hardness_floor": 0.5,
+  "shuffle_shift": 1
+}

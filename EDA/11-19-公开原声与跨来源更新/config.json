@@ -1,0 +1,81 @@
+{
+  "parent_training": "EDA/11-18-Vox英语身份扩充/config.json",
+  "parent_run": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video",
+  "group_run": "EDA/11-19-跨来源身份与结构教师/output/11-19-0115-分组五折",
+  "split_manifest": "EDA/11-19-未见身份评分校准/output/11-19-1024-两分支五折/外内层身份.json",
+  "split_sha256": "d34a657932d062e7cbc6a870a8cb460fb55e10889fe15ccbbd563742be9b9b90",
+  "external_config": "EDA/11-18-原生音画空间匹配/config.json",
+  "study_run": "EDA/11-18-原生音画空间匹配/output/11-18-214055-619bef",
+  "loc": "EDA/11-18-孟语作家独立验证/output/11-18-2210-固定来源",
+  "screened_vox": "EDA/11-18-Vox英语身份扩充/output/英语片段筛选.json",
+  "pretrain_run": "EDA/11-19-面部内外与陌生身份匹配/output/11-19-配平五折",
+  "reference_run": "EDA/11-19-跨日声音与单塔适配/output/11-19-共同验证",
+  "sf22_media": "EDA/11-19-跨日声音与单塔适配/output/11-19-新22人原始材料",
+  "sf22_features": "EDA/11-19-跨日声音与单塔适配/output/11-19-新22人原件特征",
+  "public_source": "EDA/11-19-公开英语发言人扩充/output/11-19-预定抽样",
+  "public_scores": "EDA/11-19-跨日声音与单塔适配/output/11-19-原有来源英语复核",
+  "transfer_run": "EDA/11-18-跨语言协议训练/output/11-18-185933-full",
+  "source_exclusions": [
+    "v1",
+    "v2"
+  ],
+  "featurizer_config": "EDA/11-18-公开英语跨日配对/config.json",
+  "release_cfg": "EDA/11-19-音画预训练的逐对迁移/提交包核对配置.json",
+  "seed": 2026111961,
+  "bootstrap_draws": 1000,
+  "smoke_steps": 4,
+  "primary": "meta",
+  "source_alias_audit": "EDA/11-19-跨来源身份与结构教师/output/11-19-英语训练身份关系",
+  "existing_paired": "EDA/11-19-换录制与配对交换训练/output",
+  "wiki_audio_property": "P990",
+  "face_property": "P18",
+  "languages": {
+    "en": "Q1860",
+    "bn": "Q9610"
+  },
+  "sex_values": {
+    "Q6581097": "m",
+    "Q6581072": "f"
+  },
+  "source_hosts": [
+    "https://query.wikidata.org/sparql",
+    "https://commons.wikimedia.org/w/api.php"
+  ],
+  "user_agent": "FaceVoiceResearch/0.1 (academic reproducibility study; public source metadata; Python requests)",
+  "api_batch": 22,
+  "max_candidate_per_gender": {
+    "en": 68,
+    "bn": 28
+  },
+  "workers": 2,
+  "thumbnail_width": 330,
+  "audio_max_bytes": 6000000,
+  "image_max_bytes": 1800000,
+  "max_body_bytes_total": 160000000,
+  "audio_window": 4.0,
+  "minimum_duration": 8.5,
+  "max_duration": 110.0,
+  "probe_seconds": 24,
+  "file_licenses": [
+    "Public domain",
+    "CC0",
+    "CC0 1.0"
+  ],
+  "minimum_face_pixels": 48,
+  "det_threshold": 0.75,
+  "face_padding": 1.45,
+  "external_held_mod": 4,
+  "outside_batch": 16,
+  "inside_batch": 16,
+  "meta_fraction": 0.25,
+  "lookahead_lr": 0.01,
+  "methods": [
+    "baseline",
+    "joint",
+    "meta",
+    "permuted"
+  ],
+  "budget_seconds": 1080,
+  "plan": "官方英语五折与已有跨视频预训练为起点。取英文及孟文语种声明的真人原声与独立肖像，用许可和真实文件筛选。含孟语记录的所有人物均留出，纯英语按性别以固定顺序约四分之一留出，按事前规定的跨库筛查排除可能重合者。其余英语人物用于联合训练、来源间一步可微模拟更新和同一媒体同性别内置换语音的对照。两端逐对推断。先冻结再在英语、孟语、已有外部来源和整来源留出上检验。",
+  "resource": "两线程，GPU显存占比0.2。参考相同前端106段约30秒、每15组适配约半分钟及公开站点读取实测，整个前台计算预估7至14分钟，18分钟计算预算。元数据及下载服务若限流遵从其等待提示。"
+}

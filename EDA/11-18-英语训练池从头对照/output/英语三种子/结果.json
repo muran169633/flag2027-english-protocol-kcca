@@ -1,0 +1,80 @@
+{
+  "ensemble": {
+    "fold0_standard": 16.18,
+    "fold0_same_gender": 28.34,
+    "bn_standard": 21.428571428571427,
+    "bn_same_gender": 38.88888888888889,
+    "fold1_standard": 20.52,
+    "fold1_same_gender": 29.580000000000002,
+    "fold2_standard": 19.16,
+    "fold2_same_gender": 29.42,
+    "fold3_standard": 18.22,
+    "fold3_same_gender": 31.119999999999997,
+    "fold4_standard": 16.5,
+    "fold4_same_gender": 27.82,
+    "standard": 18.116,
+    "same_gender": 29.256
+  },
+  "members": {
+    "fold0_s1": {
+      "standard": 17.1,
+      "same_gender": 29.020000000000003
+    },
+    "fold0_s2": {
+      "standard": 18.16,
+      "same_gender": 30.28
+    },
+    "fold0_s3": {
+      "standard": 16.1,
+      "same_gender": 27.66
+    },
+    "fold1_s1": {
+      "standard": 21.92,
+      "same_gender": 31.22
+    },
+    "fold1_s2": {
+      "standard": 20.979999999999997,
+      "same_gender": 31.86
+    },
+    "fold1_s3": {
+      "standard": 21.84,
+      "same_gender": 31.36
+    },
+    "fold2_s1": {
+      "standard": 17.78,
+      "same_gender": 28.24
+    },
+    "fold2_s2": {
+      "standard": 20.62,
+      "same_gender": 31.680000000000003
+    },
+    "fold2_s3": {
+      "standard": 20.4,
+      "same_gender": 30.18
+    },
+    "fold3_s1": {
+      "standard": 18.360000000000003,
+      "same_gender": 29.14
+    },
+    "fold3_s2": {
+      "standard": 20.4,
+      "same_gender": 33.62
+    },
+    "fold3_s3": {
+      "standard": 18.64,
+      "same_gender": 30.020000000000003
+    },
+    "fold4_s1": {
+      "standard": 16.54,
+      "same_gender": 28.74
+    },
+    "fold4_s2": {
+      "standard": 17.0,
+      "same_gender": 28.76
+    },
+    "fold4_s3": {
+      "standard": 17.48,
+      "same_gender": 28.439999999999998
+    }
+  }
+}

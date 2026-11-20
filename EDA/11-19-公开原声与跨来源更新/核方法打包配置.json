@@ -1,0 +1,10 @@
+{
+  "training": "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折",
+  "baselines": "EDA/11-19-公开原声与跨来源更新/output/11-19-协议专用原模型复放",
+  "validation": "EDA/11-19-公开原声与跨来源更新/output/11-19-核方向跨语逐对验证",
+  "zip": "evaluation/research_candidates/submission_evaluation_english_protocol_kcca.zip",
+  "reference_package": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video/候选包验收.json",
+  "selected": "specialist_plus_rbf",
+  "validation_cells": ["crema_standard","crema_same_gender","bangla_standard","bangla_same_gender","sf_test_standard","sf_test_same_gender","second_all_standard","second_all_same_gender","actors_same_both_standard","actors_same_both_same_gender","lombard_pl_standard","lombard_pl_same_gender"],
+  "samples_per_cell": 24
+}

@@ -1,0 +1,70 @@
+{
+  "experiment_id": "v303",
+  "output_root": "outputs",
+  "scope": "碎片合并闭集转导分配；v302失败（人脸簇碎片）后的探索性修正。min_edges与merge_threshold依据native20 confirmation_0真值诊断设定，native20不再是干净评估；new25仅看过v302结果。官方开发集打包与否按决策规则，不上传。",
+  "preregistered_at": "2026-11-08T17:10:00+08:00",
+  "preregistration_note": "参数在打开v303任何EER前固定，但设计受native20诊断影响（探索性，非盲测）。primary=closed_merged。",
+  "positive_prior": 0.5,
+  "primary": "closed_merged",
+  "variants": {
+    "v219": "部署v219（v300 baseline回放）",
+    "v219_no_competition": "v219去竞争",
+    "closed_merged": "碎片合并闭集分配",
+    "rank_fusion": "v219与closed_merged每协议归一化秩等权平均"
+  },
+  "probability_floor": 1e-08,
+  "vote_pseudocount": 0.5,
+  "partition_pseudocount": 0.5,
+  "profile_pseudocount": 0.5,
+  "profile_norm_floor": 1e-12,
+  "graph_pseudocount": 0.5,
+  "numerical_tolerance": 1e-07,
+  "local_model": "outputs/v218/11-08-015709-46b194/fold_0/partition_local_connectivity.json",
+  "edge_model": "outputs/v219/11-08-020112-c01c68/fold_0/partition_local_connectivity_edge.json",
+  "final_model": "outputs/v219/11-08-020112-c01c68/fold_0/partition_local_connectivity.json",
+  "native_index": "outputs/v275/11-08-124847-07c90b/index.json",
+  "transfer_root": "outputs/v211/11-08-002557-0cede3",
+  "transfer_queries": "outputs/candidates/new25-bilingual-fixed-queries-v211/queries.npz",
+  "transfer_conditions": [
+    "English_standard",
+    "English_acoustic_hard",
+    "Hindi_standard",
+    "Hindi_acoustic_hard"
+  ],
+  "contexts": [
+    "confirmation_0",
+    "confirmation_1",
+    "confirmation_2"
+  ],
+  "reference_run": "outputs/v300/11-08-162832-70fb12",
+  "replay_check_contexts": 1,
+  "official_storage": "outputs/v204/11-07-224414-9f89ba/storage.npz",
+  "official_v276_run": "outputs/v276/11-08-125720-f75e69",
+  "official_v219_zip": "submission_v219.zip",
+  "official_v219_zip_sha256": "f7d53854ac607b448cb681bfd418b4080b8accea9e17bdfed941a1d25f557604",
+  "feature_manifest": "outputs/v066/11-07-025153-b764e7/manifest.json",
+  "expected_cells": {
+    "no_gender/English": 1008,
+    "no_gender/Bangla": 1406,
+    "gender/English": 982,
+    "gender/Bangla": 1468
+  },
+  "deliveries": {
+    "closed": "submission_v303_closed.zip"
+  },
+  "decision_rule": "历史两来源（native20、new25）各自三图平均的英语两协议均值上，closed_merged若同时低于v219则打包closed_merged；否则若rank_fusion同时低于v219则打包rank_fusion；否则不打包闭集类。去竞争包已由v302交付，本实验不重复打包。",
+  "score_decimals": 12,
+  "compression_level": 6,
+  "archive_timestamp": [
+    2026,
+    11,
+    8,
+    0,
+    0,
+    0
+  ],
+  "compliance": "无训练、无官方标签；整批转导规则许可未确认，research_only；不自动上传。",
+  "min_edges": 10,
+  "merge_threshold": 0.6,
+  "physical_checks": 4
+}

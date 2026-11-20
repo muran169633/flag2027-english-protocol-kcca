@@ -1,0 +1,15 @@
+{
+  "cells": {
+    "no_gender/sub_score_v4_English_heard.txt": 392,
+    "no_gender/sub_score_v4_Bangla_unheard.txt": 802,
+    "gender/sub_score_v4_English_heard.txt": 416,
+    "gender/sub_score_v4_Bangla_unheard.txt": 716
+  },
+  "identical_members": {
+    "no_gender/sub_score_v4_English_heard.txt": true,
+    "no_gender/sub_score_v4_Bangla_unheard.txt": true,
+    "gender/sub_score_v4_English_heard.txt": true,
+    "gender/sub_score_v4_Bangla_unheard.txt": true
+  },
+  "zip_sha256": "faf1c779c4a86b3dbe5b1a9c09ac5a5c35f3e348c9ffc0f5526afbf5bfcd2ec3"
+}

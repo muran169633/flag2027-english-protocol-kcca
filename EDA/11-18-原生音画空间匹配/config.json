@@ -1,0 +1,87 @@
+{
+  "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "threads": 2,
+  "gpu_fraction": 0.2,
+  "asset_seconds": 420,
+  "network_timeout_seconds": 24,
+  "voice_rate": 16000,
+  "crop_seconds": 2,
+  "image_batch": 18,
+  "inner_per_class_per_identity": 48,
+  "seed": 2026111807,
+  "logistic_c": 1.0,
+  "assets": {
+    "visual": {
+      "name": "ViT-B-32.pt",
+      "bytes": 353976522,
+      "sha256": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+      "url": "https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt"
+    },
+    "audio": {
+      "name": "Wav2CLIP.pt",
+      "bytes": 48968059,
+      "sha256": "264f879658d2638c3941a5058917ce99d2217808130d11b2ddaee60b5a39b8d5",
+      "url": "https://github.com/descriptinc/lyrebird-wav2clip/releases/download/v0.1.0-alpha/Wav2CLIP.pt"
+    }
+  },
+  "sources": {
+    "Wav2CLIP": {
+      "repository": "descriptinc/lyrebird-wav2clip",
+      "rev": "1864b3924be5a785e2d49d975b8a26ff93f62951",
+      "files": [
+        "wav2clip/__init__.py",
+        "wav2clip/model/__init__.py",
+        "wav2clip/model/encoder.py",
+        "wav2clip/model/resnet.py"
+      ]
+    },
+    "OpenAI-CLIP": {
+      "repository": "openai/CLIP",
+      "rev": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+      "files": [
+        "clip/model.py"
+      ]
+    }
+  },
+  "weights": "data/pretrained/wav2clip",
+  "manifest": "outputs/v377/11-11-174859-full-87a488/manifest.json",
+  "parent": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video",
+  "external": "EDA/11-18-公开英语跨日配对",
+  "bangla": "EDA/11-18-孟加拉语验证源/output",
+  "duration_run": "EDA/11-18-完整录音指导短语音/output/11-18-205219-732598-study/full",
+  "crema": "outputs/research/11-13-msm-native-transfer/crema_stress",
+  "claim": "主要考察真实身份辅助融合在官方英语整段两协议和独立跨语言来源相对既有候选的收益，并与同性别内打乱配对的等维融合比较。不用任何外层或外部配对拟合阈值、权重和归一化。",
+  "encode_seconds": 390,
+  "review_seconds": 170,
+  "logistic_max_iter": 500,
+  "logistic_tolerance": 1e-08,
+  "acoustic_adaptation": {
+    "seed": 172927,
+    "teachers": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "arms": [
+      "projection",
+      "backbone",
+      "permuted"
+    ],
+    "steps": 96,
+    "profile_steps": 5,
+    "identities_per_batch": 24,
+    "temperature": 0.08,
+    "encoder_learning_rate": 3e-05,
+    "head_learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "eval_batch": 32,
+    "prepare_cap_seconds": 75,
+    "profile_cap_seconds": 60,
+    "full_cap_seconds": 540,
+    "deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "budget_seconds": 1080,
+  "verify_seconds": 100,
+  "native_profile_use": "训练人物坐标相似度和坐标归一化仅用于研究诊断。正式导向的全声音骨干只输出与一张脸的余弦，再用训练身份确定的常数权重融合。"
+}

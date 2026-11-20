@@ -1,0 +1,86 @@
+{
+  "0_standard": {
+    "base": 16.38,
+    "aligned": 15.52,
+    "shared": 16.3,
+    "shrink_only": 18.32
+  },
+  "0_same_gender": {
+    "base": 28.54,
+    "aligned": 26.740000000000002,
+    "shared": 27.560000000000002,
+    "shrink_only": 28.76
+  },
+  "bn_standard": {
+    "base": 21.428571428571427,
+    "aligned": 17.857142857142858,
+    "shared": 15.476190476190476,
+    "shrink_only": 17.857142857142858
+  },
+  "bn_same_gender": {
+    "base": 30.555555555555557,
+    "aligned": 22.22222222222222,
+    "shared": 28.571428571428577,
+    "shrink_only": 36.11111111111111
+  },
+  "1_standard": {
+    "base": 19.939999999999998,
+    "aligned": 21.46,
+    "shared": 22.18,
+    "shrink_only": 25.64
+  },
+  "1_same_gender": {
+    "base": 28.999999999999996,
+    "aligned": 30.9,
+    "shared": 31.180000000000003,
+    "shrink_only": 33.18
+  },
+  "2_standard": {
+    "base": 18.9,
+    "aligned": 19.34,
+    "shared": 19.439999999999998,
+    "shrink_only": 22.08
+  },
+  "2_same_gender": {
+    "base": 30.680000000000003,
+    "aligned": 29.720000000000002,
+    "shared": 29.38,
+    "shrink_only": 30.080000000000002
+  },
+  "3_standard": {
+    "base": 16.74,
+    "aligned": 16.8,
+    "shared": 17.26,
+    "shrink_only": 20.18
+  },
+  "3_same_gender": {
+    "base": 28.28,
+    "aligned": 27.96,
+    "shared": 28.82,
+    "shrink_only": 31.04
+  },
+  "4_standard": {
+    "base": 15.76,
+    "aligned": 15.22,
+    "shared": 16.5,
+    "shrink_only": 20.32
+  },
+  "4_same_gender": {
+    "base": 27.3,
+    "aligned": 26.32,
+    "shared": 26.6,
+    "shrink_only": 30.159999999999997
+  },
+  "standard": {
+    "base": 17.544,
+    "aligned": 17.668,
+    "shrink_only": 21.308,
+    "shared": 18.336000000000002
+  },
+  "same_gender": {
+    "base": 28.76,
+    "aligned": 28.327999999999996,
+    "shrink_only": 30.644,
+    "shared": 28.708
+  }
+}

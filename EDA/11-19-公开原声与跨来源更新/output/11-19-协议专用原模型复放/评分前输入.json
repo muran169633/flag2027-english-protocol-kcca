@@ -1,0 +1,99 @@
+{
+  "design": {
+    "production": "EDA/11-18-跨语言协议训练/output/11-18-190906-production",
+    "actors": "EDA/11-19-公开原声与跨来源更新/output/11-19-演员等量两拍",
+    "lombard": "EDA/11-19-公开原声与跨来源更新/output/11-19-全员正面相机",
+    "release": "EDA/11-19-公开原声与跨来源更新/output/11-19-英语候选同配对复核/英语候选同配对复核.json",
+    "seed": 2026111973,
+    "inner_groups": 4,
+    "media_per_person": 3,
+    "paired_negatives": 8,
+    "ridge_ratio": 0.01,
+    "dimensions": 32,
+    "calibration_c": 1.0,
+    "models": [
+      "rbf",
+      "linear",
+      "permuted"
+    ],
+    "primary": "specialist_plus_rbf",
+    "comparisons": [
+      [
+        "specialist",
+        "current"
+      ],
+      [
+        "midpoint",
+        "current"
+      ],
+      [
+        "specialist",
+        "same_gender"
+      ],
+      [
+        "specialist_plus_rbf",
+        "current"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist_plus_permuted"
+      ],
+      [
+        "specialist_plus_rbf",
+        "specialist_plus_linear"
+      ],
+      [
+        "rbf",
+        "permuted"
+      ],
+      [
+        "rbf",
+        "linear"
+      ]
+    ],
+    "design": "复核现有普通、同来源随机负例、同来源同性别负例系统，并固定用随机负例处理标准协议、同性别负例处理同性别协议。该选择参考过英语五折和七人孟语，另用两份孟语作家录音、陌生演员和跨日来源确认。新分支只对训练人物拟合正则化核典型相关分析，各脸声特征块先独立单位化，各人各录制等权，只从训练人物确定核带宽。比较径向基核、线性核和同来源同性别内置换训练对应。每种分支从训练人物内部四组留身份预测拟合分协议对数胜算。新分支的对数胜算以一倍系数加到冻结协议专用系统原始分数。主分析为按每对独立推理的分协议系统加径向基核，权重和带宽均不根据评测来源选择。另训练整库排除 v1/v2 的独立版本及仅本折官方英语训练的独立分支。"
+  },
+  "training_lock": "53962b74e7a618e627690d088be7ac3fb8ee92eac7bef24e847975e06e685d28",
+  "parameters": {
+    "standard": {
+      "fixed": {
+        "path": "EDA/11-18-跨录制协方差迁移/output/纯英语移除eres评分参数.npz",
+        "sha256": "ac02ce0330c7691ec5832d4db996e0bb6f2d7b289a027e5270e203e848e3bfdc"
+      },
+      "current": {
+        "path": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video/standard_parameters.npz",
+        "sha256": "54cef9f5f3c4e96400784067b3f87d4f534c068d917787a398c150f86e0a4ed8"
+      },
+      "count_matched": {
+        "path": "EDA/11-18-跨语言协议训练/output/11-18-190906-production/count_matched/standard_parameters.npz",
+        "sha256": "660fb527ed063f8ee7c590f5d04d4429b5e6bddd4fe4f880db44e8bfa174fe2c"
+      },
+      "same_gender": {
+        "path": "EDA/11-18-跨语言协议训练/output/11-18-190906-production/same_gender/standard_parameters.npz",
+        "sha256": "ee3d2bf6af2099f3434b755e608ef387a253f1bfce19e1dd44d8b5f3325681a3"
+      }
+    },
+    "same_gender": {
+      "fixed": {
+        "path": "EDA/11-18-跨录制协方差迁移/output/纯英语评分参数.npz",
+        "sha256": "f8de1ad622852ee3f4d8ddfec04f8e5aacada964413df777bba34c0f874a8469"
+      },
+      "current": {
+        "path": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video/same_gender_parameters.npz",
+        "sha256": "8be06d0cdb20c57bc3098fc59d015f5074d9954577109500fd8572e7c411bfdf"
+      },
+      "count_matched": {
+        "path": "EDA/11-18-跨语言协议训练/output/11-18-190906-production/count_matched/same_gender_parameters.npz",
+        "sha256": "6f756298c8067296c37a39c12ef244e6c2a32525e1c16aaea51be39178bf6dd4"
+      },
+      "same_gender": {
+        "path": "EDA/11-18-跨语言协议训练/output/11-18-190906-production/same_gender/same_gender_parameters.npz",
+        "sha256": "64e0a332a9cabc0a494cd1882b4f70a437c5ae5f5274187a0839db4e53ef780a"
+      }
+    }
+  }
+}

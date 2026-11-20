@@ -1,0 +1,121 @@
+{
+  "metrics": {
+    "old": {
+      "fold0_standard": 16.919999999999998,
+      "bn_standard": 21.428571428571427,
+      "crema_standard": 31.318681318681318,
+      "fold0_same_gender": 26.740000000000002,
+      "bn_same_gender": 22.22222222222222,
+      "crema_same_gender": 43.956043956043956,
+      "fold1_standard": 20.0,
+      "fold1_same_gender": 30.9,
+      "fold2_standard": 18.4,
+      "fold2_same_gender": 29.720000000000002,
+      "fold3_standard": 15.64,
+      "fold3_same_gender": 27.96,
+      "fold4_standard": 15.36,
+      "fold4_same_gender": 26.32,
+      "flag_standard": 17.264000000000003,
+      "flag_same_gender": 28.327999999999996
+    },
+    "expanded": {
+      "fold0_standard": 15.22,
+      "bn_standard": 20.238095238095237,
+      "crema_standard": 30.494505494505496,
+      "fold0_same_gender": 24.86,
+      "bn_same_gender": 28.571428571428577,
+      "crema_same_gender": 38.46153846153847,
+      "fold1_standard": 22.12,
+      "fold1_same_gender": 31.16,
+      "fold2_standard": 17.34,
+      "fold2_same_gender": 27.54,
+      "fold3_standard": 16.56,
+      "fold3_same_gender": 27.820000000000007,
+      "fold4_standard": 16.76,
+      "fold4_same_gender": 26.58,
+      "flag_standard": 17.6,
+      "flag_same_gender": 27.592000000000002
+    },
+    "equal": {
+      "fold0_standard": 15.52,
+      "bn_standard": 20.238095238095237,
+      "crema_standard": 29.67032967032967,
+      "fold0_same_gender": 25.36,
+      "bn_same_gender": 27.77777777777778,
+      "crema_same_gender": 41.07142857142857,
+      "fold1_standard": 20.54,
+      "fold1_same_gender": 30.48,
+      "fold2_standard": 18.42,
+      "fold2_same_gender": 27.38,
+      "fold3_standard": 14.46,
+      "fold3_same_gender": 28.08,
+      "fold4_standard": 15.120000000000001,
+      "fold4_same_gender": 25.44,
+      "flag_standard": 16.812,
+      "flag_same_gender": 27.348000000000003
+    }
+  },
+  "calibration_source": "official_trial_rows",
+  "candidate_positive_mode": "cross_video",
+  "trials": {
+    "fold0_standard": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "bn_standard": {
+      "count": 98,
+      "positive": 14
+    },
+    "crema_standard": {
+      "count": 2366,
+      "positive": 182
+    },
+    "fold0_same_gender": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "bn_same_gender": {
+      "count": 50,
+      "positive": 14
+    },
+    "crema_same_gender": {
+      "count": 2366,
+      "positive": 182
+    },
+    "fold1_standard": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold1_same_gender": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold2_standard": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold2_same_gender": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold3_standard": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold3_same_gender": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold4_standard": {
+      "count": 10000,
+      "positive": 5000
+    },
+    "fold4_same_gender": {
+      "count": 10000,
+      "positive": 5000
+    }
+  },
+  "flag_aggregation": "五折分别对三种子分数取均值，计算 EER 后再平均五折",
+  "external_aggregation": "十五个模型分数等权平均，再计算 EER",
+  "elapsed": 7.32748672796879
+}

@@ -1,0 +1,83 @@
+{
+  "parent": "outputs/research/11-14-v382-v2-source-holdout/20261114T160252Z-scoring",
+  "metadata": "outputs/v379/features",
+  "protocols": [
+    "English_to_Hindi",
+    "Hindi_to_English",
+    "English_to_English",
+    "Hindi_to_Hindi"
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "python_prefix": "/home/xxc/miniconda3/envs/my_project_env",
+  "output_root": "outputs",
+  "experiment_id": "v494",
+  "voice_features": [
+    [
+      "outputs/v379/features/train_voices_wavlm.npz",
+      "wavlm"
+    ],
+    [
+      "outputs/v379/features/train_voices.npz",
+      "ecapa"
+    ],
+    [
+      "outputs/v379/features/train_voices.npz",
+      "eres"
+    ],
+    [
+      "outputs/v379/features/train_voices.npz",
+      "resnet"
+    ],
+    [
+      "outputs/v383/features/train_voices_generic.npz",
+      "whisper"
+    ],
+    [
+      "outputs/v383/features/train_voices_generic.npz",
+      "age6"
+    ]
+  ],
+  "source_languages": {
+    "v1": "Urdu",
+    "v3": "German"
+  },
+  "reference_language": "English",
+  "random_seed": 490,
+  "epsilon": 1e-05,
+  "face_features": [
+    [
+      "outputs/v381/features/train_faces_generic.npz",
+      "clip"
+    ],
+    [
+      "outputs/v382/features/train_faces_large.npz",
+      "clipL"
+    ]
+  ],
+  "flag_pairs": "outputs/v480/11-18-104532-full-e32206/diagnostic_predictions.npz",
+  "flag_protocols": [
+    "standard",
+    "same_gender"
+  ],
+  "arms": [
+    "base",
+    "english",
+    "bilingual"
+  ],
+  "epochs": 32,
+  "lr": 0.01,
+  "temperature": 0.07,
+  "voices_per_id": 2,
+  "wandb_project": "flag-face-voice"
+}

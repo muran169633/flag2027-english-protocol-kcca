@@ -1,0 +1,50 @@
+{
+  "fold0_english": {
+    "standard": 17.1,
+    "same_gender": 29.020000000000003
+  },
+  "fold0_multilingual": {
+    "standard": 17.5,
+    "same_gender": 28.82
+  },
+  "fold1_english": {
+    "standard": 21.92,
+    "same_gender": 31.22
+  },
+  "fold1_multilingual": {
+    "standard": 19.16,
+    "same_gender": 28.4
+  },
+  "fold2_english": {
+    "standard": 17.78,
+    "same_gender": 28.24
+  },
+  "fold2_multilingual": {
+    "standard": 19.02,
+    "same_gender": 29.360000000000003
+  },
+  "fold3_english": {
+    "standard": 18.360000000000003,
+    "same_gender": 29.14
+  },
+  "fold3_multilingual": {
+    "standard": 20.0,
+    "same_gender": 32.16
+  },
+  "fold4_english": {
+    "standard": 16.54,
+    "same_gender": 28.74
+  },
+  "fold4_multilingual": {
+    "standard": 16.48,
+    "same_gender": 27.92
+  },
+  "english": {
+    "standard": 18.340000000000003,
+    "same_gender": 29.272000000000002
+  },
+  "multilingual": {
+    "standard": 18.432,
+    "same_gender": 29.332
+  }
+}

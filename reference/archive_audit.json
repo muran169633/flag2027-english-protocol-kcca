@@ -1,0 +1,122 @@
+{
+  "package": "evaluation/research_candidates/submission_evaluation_english_protocol_kcca.zip",
+  "sha256": "faf1c779c4a86b3dbe5b1a9c09ac5a5c35f3e348c9ffc0f5526afbf5bfcd2ec3",
+  "pairs": {
+    "no_gender/sub_score_v4_English_heard.txt": 392,
+    "no_gender/sub_score_v4_Bangla_unheard.txt": 802,
+    "gender/sub_score_v4_English_heard.txt": 416,
+    "gender/sub_score_v4_Bangla_unheard.txt": 716
+  },
+  "input_sha256": {
+    "outputs/v379/features/eval_faces.json": "b352d00d1a4722941df86b494923c3cfd8ce6e7c8ed6ad8a0a8ef7d6606a163b",
+    "outputs/v381/features/eval_faces_generic.npz": "2a713c431d3b7b370b3085f06d08d173dffb7c8c737ba57369ab842c568bcdf4",
+    "outputs/v382/features/eval_faces_large.npz": "850a8ccd0cfeac0e911b3df30db3671d8f6e5b2b16d978d948da736073d0fd5e",
+    "outputs/v379/features/eval_voices.json": "4c8ccc092540c4326a51f5c5fe835ee85cffbf729ef5c4f0119d1d320e7d5f3a",
+    "outputs/v379/features/eval_voices_wavlm.npz": "b3a641f84ff55ccb1a500f13edbc75ac509b53b66e39b53da9d02a64a516c0d3",
+    "outputs/v379/features/eval_voices.npz": "6aa4628d0d409eaf53b3d65405c61389b7082ac5e88c20e6b1c3471bec8add78",
+    "outputs/v383/features/eval_voices_generic.npz": "35ff7900efb15bbf5543174cb5765cf6c7c787e1a9a753dc4f8cff54ff22e986",
+    "data/FLAG_2027/evaluation_phase/no_gender/English_valid.txt": "d2b51e147d41a925e343b7424c8bddbc777fb8687d73ba35a3fee040f9086ed8",
+    "data/FLAG_2027/evaluation_phase/no_gender/Bangla_valid.txt": "3e9c7a3c58022b8440eb8708fe2139e86d36f209930534d0a58004576ffee8e8",
+    "data/FLAG_2027/evaluation_phase/gender/English_valid.txt": "c80040de35730ceb9fa56a1228a9ed5c3ab317138951b936a1d4eb926e968ace",
+    "data/FLAG_2027/evaluation_phase/gender/Bangla_valid.txt": "5b4836ac8b1c9c0fa255c8d01946c054f4d732e9ffb2763525ba4700ab0a8a28"
+  },
+  "platform_submission": null,
+  "parameters": {
+    "EDA/11-18-跨录制协方差迁移/output/纯英语移除eres评分参数.npz": "ac02ce0330c7691ec5832d4db996e0bb6f2d7b289a027e5270e203e848e3bfdc",
+    "EDA/11-18-跨语言协议训练/output/11-18-190906-production/count_matched/standard_parameters.npz": "660fb527ed063f8ee7c590f5d04d4429b5e6bddd4fe4f880db44e8bfa174fe2c",
+    "EDA/11-18-跨录制协方差迁移/output/纯英语评分参数.npz": "f8de1ad622852ee3f4d8ddfec04f8e5aacada964413df777bba34c0f874a8469",
+    "EDA/11-18-跨语言协议训练/output/11-18-190906-production/same_gender/same_gender_parameters.npz": "64e0a332a9cabc0a494cd1882b4f70a437c5ae5f5274187a0839db4e53ef780a",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold0/rbf.npz": "39aa6320500d41890bc8a9d4dbb78942905919ba9f470eb527baa1f13bfc304e",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold1/rbf.npz": "473bb28ebd9cd25406d565c25060435508a5d16b3c017901aeb16dcb7b341253",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold2/rbf.npz": "dc9f102389f91ea91c2544b021be5d87c62fea42c58745be5682b87caaf94d99",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold3/rbf.npz": "e02853e087117b28fb9db85acc57c79d22b646a088afdc65202347048bf6c788",
+    "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折/development/fold4/rbf.npz": "39bb2a6bb4b92dfac9d687f1de9a18778670edee6926c842944a1a31a2d90879"
+  },
+  "validation_sha256": "1caabce54a5c27224179368a85aa91664eb3a86d2bb61b0c27bb8895f4a69cf3",
+  "config": {
+    "training": "EDA/11-19-公开原声与跨来源更新/output/11-19-人物核方向五折",
+    "baselines": "EDA/11-19-公开原声与跨来源更新/output/11-19-协议专用原模型复放",
+    "validation": "EDA/11-19-公开原声与跨来源更新/output/11-19-核方向跨语逐对验证",
+    "zip": "evaluation/research_candidates/submission_evaluation_english_protocol_kcca.zip",
+    "reference_package": "EDA/11-18-Vox英语身份扩充/output/11-18-183108-cross_video/候选包验收.json",
+    "selected": "specialist_plus_rbf",
+    "validation_cells": [
+      "crema_standard",
+      "crema_same_gender",
+      "bangla_standard",
+      "bangla_same_gender",
+      "sf_test_standard",
+      "sf_test_same_gender",
+      "second_all_standard",
+      "second_all_same_gender",
+      "actors_same_both_standard",
+      "actors_same_both_same_gender",
+      "lombard_pl_standard",
+      "lombard_pl_same_gender"
+    ],
+    "samples_per_cell": 24
+  },
+  "validation_replay": {
+    "crema_standard": {
+      "pairs": 24,
+      "max_abs": 1.4210854715202004e-14,
+      "single": 5.329070518200751e-15
+    },
+    "crema_same_gender": {
+      "pairs": 24,
+      "max_abs": 8.881784197001252e-15,
+      "single": 3.552713678800501e-15
+    },
+    "bangla_standard": {
+      "pairs": 24,
+      "max_abs": 1.4210854715202004e-14,
+      "single": 2.220446049250313e-15
+    },
+    "bangla_same_gender": {
+      "pairs": 24,
+      "max_abs": 7.105427357601002e-15,
+      "single": 6.661338147750939e-16
+    },
+    "sf_test_standard": {
+      "pairs": 24,
+      "max_abs": 2.1316282072803006e-14,
+      "single": 3.552713678800501e-15
+    },
+    "sf_test_same_gender": {
+      "pairs": 24,
+      "max_abs": 1.4210854715202004e-14,
+      "single": 2.6645352591003757e-15
+    },
+    "second_all_standard": {
+      "pairs": 24,
+      "max_abs": 2.842170943040401e-14,
+      "single": 3.552713678800501e-15
+    },
+    "second_all_same_gender": {
+      "pairs": 24,
+      "max_abs": 1.0658141036401503e-14,
+      "single": 8.881784197001252e-16
+    },
+    "actors_same_both_standard": {
+      "pairs": 24,
+      "max_abs": 1.0658141036401503e-14,
+      "single": 8.881784197001252e-16
+    },
+    "actors_same_both_same_gender": {
+      "pairs": 24,
+      "max_abs": 7.105427357601002e-15,
+      "single": 0.0
+    },
+    "lombard_pl_standard": {
+      "pairs": 24,
+      "max_abs": 1.1102230246251565e-14,
+      "single": 7.105427357601002e-15
+    },
+    "lombard_pl_same_gender": {
+      "pairs": 24,
+      "max_abs": 8.992806499463768e-15,
+      "single": 1.7763568394002505e-15
+    }
+  },
+  "research_only": true
+}
